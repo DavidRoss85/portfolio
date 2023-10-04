@@ -1,0 +1,26 @@
+body{
+    /* text-align: center; */
+    background: rgb(42, 42, 243);
+    background-image: url("../images/Blue_background_Canva.png");
+    color:white;
+}
+
+div{
+    padding: .1vw 1vw;
+    /* margin: auto; */
+    width: 80%
+}
+footer{
+    /* text-align: center; */
+}
+ul{
+    text-align: left;
+    display: inline-block;
+}
+
+.transparent-box{
+    display: inline-block;
+    background-color: rgba(0,0,0,.8);
+    border-radius: 25px;
+    margin-top: 1vw;
+}
