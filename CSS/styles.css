@@ -21,6 +21,9 @@
     --logo-width:80px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     text-align: center;
     color: var(--global-font-color)
@@ -83,6 +86,7 @@ a:has(.logo){ /*For some reason the anchor holding the logo kept extending the N
     border-radius: 25px;
     margin: 1vw;
     padding: 1em;
+    
 }
 .transparent-bar {
     background:linear-gradient(to bottom,rgba(0,0,0,.8),rgba(0,0,0,0)); 
@@ -98,12 +102,15 @@ a:has(.logo){ /*For some reason the anchor holding the logo kept extending the N
 }
 .styled-hyperlink {
     & a{
+        
         text-decoration: none;
         padding: 5px 1em;
         display:inline-block;
         color:var(--nav-link-color);
         &:hover{
+            transition: .5s;
             color:var(--nav-hover-color);
+            transform: scale(1.25,1.25);
         }
     }
 }
@@ -126,4 +133,20 @@ a:has(.logo){ /*For some reason the anchor holding the logo kept extending the N
         
 }
 
-/*Experimental Code*/
+.levitate-on-hover:hover {
+        animation-duration:1s ;
+        animation-fill-mode: both;
+        animation-direction:alternate;
+        animation-iteration-count:infinite;
+        animation-name: levitate;
+           
+}
+@webkit-keyframes levitate{
+    0%, 100% {-webkit-transform: translateY(0);} 
+    25%{translateY(10%);}
+}
+@keyframes levitate{
+    0%{transform: translateY(+5%);}
+    100%{transform: translateY(-5%);} 
+}
+
