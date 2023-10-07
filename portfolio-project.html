@@ -21,17 +21,15 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-md transparent-bar-nav navbar-dark sticky-top styled-hyperlink">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand levitate short-delay-5 logo">
-                david
-                <!--logo-->
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 1080 580" preserveAspectRatio="xMinYMin meet" >
-                    <circle id="e1_circle" cx="528.181" cy="284.822" r="265.87" transform="matrix(1.12493 0 0 1.12493 -68.9927 -31.5783)"/>
-                    <text class="svg-text-1" x="409.111" y="152.031" id="e6_texte" transform="matrix(9.04567 0 0 9.04567 -3341.27 -1030.38)">dR</text>
-                    <text class="svg-text-2" x="392.274" y="147.587" id="e3_texte" transform="matrix(16.0779 0 0 16.0779 -6144.85 -1974.69)" textLength="16.399152564561803">{</text>
-                    <text class="svg-text-2" x="419.808" y="147.388" id="e5_texte" transform="matrix(16.0721 0 0 16.0721 -6151.71 -1975.78)" textLength="16.399152564561803">}</text>
-                </svg>
-                Ross
-            </a>
+                <a href="#" class="navbar-brand levitate short-delay-5 logo">
+                    <!--logo-->
+                    <svg class="px-0 mx-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="230 0 580 580" preserveAspectRatio="xMinYMin meet" width="50px">
+                        <circle id="e1_circle" cx="528.181" cy="284.822" r="265.87" transform="matrix(1.12493 0 0 1.12493 -68.9927 -31.5783)"/>
+                        <text class="svg-text-1" x="409.111" y="152.031" id="e6_texte" transform="matrix(9.04567 0 0 9.04567 -3341.27 -1030.38)">dR</text>
+                        <text class="svg-text-2" x="392.274" y="147.587" id="e3_texte" transform="matrix(16.0779 0 0 16.0779 -6144.85 -1974.69)" textLength="16.399152564561803">{</text>
+                        <text class="svg-text-2" x="419.808" y="147.388" id="e5_texte" transform="matrix(16.0721 0 0 16.0721 -6151.71 -1975.78)" textLength="16.399152564561803">}</text>
+                    </svg>
+                </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -40,7 +38,7 @@
             clicked, and adding those attributes to the anchor or list item would break the navigation link.(<li><a><span>text</span></a></li>) -->
             <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
                 <ul class="navbar-nav px-4">
-                    <li class="navbar-item levitate short-delay-1"><a href="#" aria-current="true" class="navbar-link active pl-4 pr-5"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</span></a></li>
+                    <li class="navbar-item levitate short-delay-1"><a href="#" aria-current="true" class="navbar-link active px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</span></a></li>
                     <li class="navbar-item levitate short-delay-2"><a href="#intro" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</span></a></li>
                     <li class="navbar-item levitate short-delay-3"><a href="#details" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Skills</span></a></li>
                     <li class="navbar-item levitate short-delay-4"><a href="#projects" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</span></a></li>
@@ -51,7 +49,7 @@
     </nav>
 
     <!--Header-->
-    <header class="transparent-bar">
+    <header class="transparent-bar text-center">
         <h1>David Ross</h1>
         <h2>Freelance Web Design</h2> 
     </header>
@@ -59,11 +57,11 @@
     <!-- Main body -->
     <main class="container-fluid">
         <section id="intro">
-            <div class="row justify-content-end">
+            <!-- <div class="row justify-content-end">
                 <div class="col-lg-10">
                     <h3 class="with-accent1 d-none d-md-block d-xl-none pt-5">Who am I?</h3>
                 </div>
-            </div>
+            </div> -->
             <div class="row justify-content-center pb-5">
                 <div class="col-md-12 zoom-in-from-left" >
                     <div class="row">
@@ -71,7 +69,7 @@
                             <img src="images/Icons/Computer-guy-Circle_transparent.png" alt="David Ross" class="img-fluid levitate">
                         </div>
                         <div class="col-md-7 col-lg-8 pt-3">
-                            <h3 class="with-accent1 d-block d-md-none d-xl-block">Who am I?</h3>
+                            <h3 class="with-accent1 text-center text-md-start">Who am I?</h3>
                             <p>
                                 Anything you can do, I can do it <em>better</em>... I can do anything better than you.
                             </p>
@@ -90,6 +88,12 @@
         </section>
         
         <section id="details">
+            <div class="row justify-content-center">
+                <div class="col py-4 text-center">
+                    <h3> </h3>
+                </div>
+            </div>
+
             <div class="row justify-content-center">
                 <div class="col-md-5 col-lg-3 transparent-box card levitate-on-hover">
                     <!--place some custom animation here (preferably canvas)-->
@@ -152,47 +156,37 @@
         <section id="projects">
 
             <div class="row justify-content-center">
-                <div class="col">
-                    <h3 class="transparent-bar rounded">Projects</h3>
+                <div class="col py-3 text-center">
+                    <h3 class="transparent-bar-center">Projects</h3>
                 </div>
             </div>
-
             <div class="row justify-content-center">
+                <!--CSS Cafe-->
                 <div class="col-5 col-sm-3 col-md-2 transparent-box levitate short-delay-2">
                     <a href="../schoolwork/pratice-css.html" target="_blank" class="text-decoration-none">
                         <div class="card-header">
                             <div class="rounded picture-reel-1">
-                                <h3 class="with-accent1 transparent-bar">CSS Cafe</h3>   
+                                <h3 class="with-accent1 transparent-center">CSS Cafe</h3>   
                             </div>  
                         </div>
                     </a>
-                    <!-- <div class="card-body">
-                        <p>
-                            A menu page involving floating elements and automatically sizing items.
-                        </p>
-                    </div> -->
                 </div>
-
+                <!--Nucamp Website-->
                 <div class="col-5 col-sm-3 col-md-2 transparent-box levitate short-delay-3">
                     <a href="../schoolwork/nucampsite/index.html" target="_blank" class="text-decoration-none">
                         <div class="card-header">
                             <div class="rounded picture-reel-2">
-                                <h3 class="with-accent1 transparent-bar-nav">Nucamp</h3>
+                                <h3 class="with-accent1 transparent-bar-center" >Nucamp</h3>
                             </div>
                         </div>
                     </a>
-                    <!-- <div class="card-body">
-                        <p>
-                            Website for nucamp coding school that utilizes bootstrap technologies to dynamically align and format web elements.
-                        </p>
-                    </div>-->
                 </div>
-
+                <!--Just a placeholder for now-->
                 <div class="col-5 col-sm-3 col-md-2 transparent-box levitate short-delay-1">
                     <a href="../Date_Collab/datingForm.html" target="_blank" class="text-decoration-none">
                         <div class="card-header">
                             <div class="rounded picture-reel-3">
-                                <h3 class="with-accent1 transparent-bar-nav">Placeholder</h3>
+                                <h3 class="with-accent1 transparent-bar-center">Placeholder</h3>
                             </div>
                         </div>
                     </a>
@@ -275,22 +269,31 @@
     </main>
     
   
-    <footer id="footer">
+    <footer class="text-start" id="footer">
         <hr/>
         <div class="container">
             <div class="row transparent-box styled-hyperlink">
-                <div class="col" >
-                    <h5 class="with-accent2">Connect:</h4>
+                <div class="col-sm-4 col-md-6" >
+                    <h5 class="with-accent2 text-center">Connect:</h4>
                     <a href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> LinkedIn</a>
                     <a class="short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> GitHub</a>
                     <a class="short-delay-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i> Instagram</a>
                     <a class="short-delay-3" href="#"><i class="fa-brands fa-facebook fa-xl"></i> Facebook</a>
                 </div>
-                <div class="col">
-                    <h5 class="with-accent2">Contact:</h5>
-                    <a href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> officialdavidross@gmail.com</a> 
-                    <a class="short-delay-2" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> +1-555-555-5555</a>
-                    <button class="btn btn-warning levitate short-delay-3" onclick="showFeedbackForm()">Send Feedback</button>
+                <div class="col-sm-8 col-md-6">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="with-accent2 text-center">Contact:</h5>
+                            <a href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> officialdavidross@gmail.com</a> 
+                            <a class="short-delay-2" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> +1-555-555-5555</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-xl-center">
+                            <button class="btn btn-warning levitate short-delay-3" onclick="showFeedbackForm()">Send Feedback</button>
+                        </div>
+                    </div>
+                    
                 </div>
                 
 
