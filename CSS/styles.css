@@ -154,7 +154,7 @@ footer{
     background-repeat: no-repeat;
     background-position: center;
     &:hover{
-        animation-duration:7s ;
+        animation-duration:5s ;
         animation-fill-mode: both;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
