@@ -19,29 +19,32 @@
 <body class="gradient-background">
         
     <!--Navbar-->
-    <nav class="navbar navbar-expand-sm transparent-bar-nav navbar-dark sticky-top styled-hyperlink">
-        <div class="container">
-            <!--Include this code for the navbar logo 
-                <a href="#" class="navbar-brand">
-                <div class="logo">
-                    <img src="images/DRLogo1.png"></image>
-                    <div class="color-mask">
-                        <svg>
-                            <circle />
-                        </svg>
-                    </div>
-                </div>
-            </a> -->
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+    <nav class="navbar navbar-expand-md transparent-bar-nav navbar-dark sticky-top styled-hyperlink">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand levitate short-delay-5 logo">
+                david
+                <!--logo-->
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 1080 580" preserveAspectRatio="xMinYMin meet" >
+                    <circle id="e1_circle" cx="528.181" cy="284.822" r="265.87" transform="matrix(1.12493 0 0 1.12493 -68.9927 -31.5783)"/>
+                    <text class="svg-text-1" x="409.111" y="152.031" id="e6_texte" transform="matrix(9.04567 0 0 9.04567 -3341.27 -1030.38)">dR</text>
+                    <text class="svg-text-2" x="392.274" y="147.587" id="e3_texte" transform="matrix(16.0779 0 0 16.0779 -6144.85 -1974.69)" textLength="16.399152564561803">{</text>
+                    <text class="svg-text-2" x="419.808" y="147.388" id="e5_texte" transform="matrix(16.0721 0 0 16.0721 -6151.71 -1975.78)" textLength="16.399152564561803">}</text>
+                </svg>
+                Ross
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+            <!-- Wrapped all of the Link names in a ...span data-bs-toggle... to work around a glitch where the navbar would remain open when
+            clicked, and adding those attributes to the anchor or list item would break the navigation link.(<li><a><span>text</span></a></li>) -->
             <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
-                <ul class="navbar-nav px-5">
-                    <li class="navbar-item levitate-on-hover"><a href="#" aria-current="true" class="navbar-link active px-5">Home</a></li>
-                    <li class="navbar-item bouncy bounce"><a href="#" class="navbar-link px-5">About</a></li>
-                    <li class="navbar-item bouncy bounce"><a href="#" class="navbar-link px-5">Skills</a></li>
-                    <li class="navbar-item bouncy bounce"><a href="#more" class="navbar-link px-5">Projects</a></li>
+                <ul class="navbar-nav px-4">
+                    <li class="navbar-item levitate short-delay-1"><a href="#" aria-current="true" class="navbar-link active pl-4 pr-5"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</span></a></li>
+                    <li class="navbar-item levitate short-delay-2"><a href="#intro" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</span></a></li>
+                    <li class="navbar-item levitate short-delay-3"><a href="#details" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Skills</span></a></li>
+                    <li class="navbar-item levitate short-delay-4"><a href="#projects" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</span></a></li>
+                    <li class="navbar-item levitate short-delay-5"><a href="#footer" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</span></a></li>
                 </ul>
             </div>
         </div>
@@ -50,21 +53,38 @@
     <!--Header-->
     <header class="transparent-bar">
         <h1>David Ross</h1>
-        <h2>Full Stack Web Developer</h2> 
+        <h2>Freelance Web Design</h2> 
     </header>
 
-    
-    <main class="container">
+    <!-- Main body -->
+    <main class="container-fluid">
         <section id="intro">
-            <div class="row justify-content-center">
-                <div class="col-md-10 transparent-box levitate-on-hover" >
-                    <h3>What can I <em>do</em>?</h3>
-                    <p>
-                        Anything you can do, I can do it <em>better</em>... I can do anything better than you.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce. Nulla facilisi cras fermentum odio eu feugiat. Libero nunc consequat interdum varius sit amet mattis vulputate. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Non tellus orci ac auctor. Dictum non consectetur a erat nam at lectus urna duis. Vel pharetra vel turpis nunc eget. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Viverra nam libero justo laoreet. In eu mi bibendum neque egestas congue quisque egestas diam. Iaculis urna id volutpat lacus laoreet non curabitur. Elit duis tristique sollicitudin nibh sit amet. Ultrices tincidunt arcu non sodales neque sodales ut etiam sit. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Amet facilisis magna etiam tempor orci. Urna porttitor rhoncus dolor purus non enim. Ut eu sem integer vitae justo eget magna fermentum.
-                    </p>
+            <div class="row justify-content-end">
+                <div class="col-lg-10">
+                    <h3 class="with-accent1 d-none d-md-block d-xl-none pt-5">Who am I?</h3>
+                </div>
+            </div>
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-12 zoom-in-from-left" >
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3 pb-3 pt-3">
+                            <img src="images/Icons/Computer-guy-Circle_transparent.png" alt="David Ross" class="img-fluid levitate">
+                        </div>
+                        <div class="col-md-7 col-lg-8 pt-3">
+                            <h3 class="with-accent1 d-block d-md-none d-xl-block">Who am I?</h3>
+                            <p>
+                                Anything you can do, I can do it <em>better</em>... I can do anything better than you.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Non tellus orci ac auctor. Dictum non consectetur a erat nam at lectus urna duis. 
+                                Vel pharetra vel turpis nunc eget. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Viverra nam libero justo laoreet. 
+                                Elit duis tristique sollicitudin nibh sit amet. Ultrices tincidunt arcu non sodales neque sodales ut etiam sit. 
+                                Lorem donec massa sapien faucibus et molestie ac feugiat sed. Amet facilisis magna etiam tempor orci. 
+                                Urna porttitor rhoncus dolor purus non enim. Ut eu sem integer vitae justo eget magna fermentum.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -74,7 +94,7 @@
                 <div class="col-md-5 col-lg-3 transparent-box card levitate-on-hover">
                     <!--place some custom animation here (preferably canvas)-->
                     <div class="card-header">
-                        <img class="img-fluid" src="images/Earth.jpg"/>
+                        <img class="img-fluid" src="images/Earth.jpg" alt=""/>
                         <h3>Platform</h3>
                     </div>
                     <div class="card-body">
@@ -93,7 +113,7 @@
                 <div class="col-md-5 col-md-5 col-lg-3 transparent-box card levitate-on-hover">
                     <!--place some custom animation here (preferably canvas)-->
                     <div class="card-header">
-                            <img class="img-fluid" src="images/tree-by-Bessi-pixbay.jpg"/>
+                            <img class="img-fluid" src="images/tree-by-Bessi-pixbay.jpg" alt=""/>
                             <!-- Image courtesy of pixaby.com royaly free art. Artist: Bessi - bess.hamiti@gmail.com -->
                             <h3>Skills</h3>
                         </div>
@@ -111,7 +131,7 @@
                     
                 <div class="col-md-5 col-lg-3 transparent-box card levitate-on-hover">
                     <div class="card-header">
-                        <img class="img-fluid" src="images/Earth.jpg" />
+                        <img class="img-fluid" src="images/Earth.jpg" alt="" />
                         <!-- Image courtesy of pixabay.com royalty free art. Artist: Arek Socha from Pixabay -->
                         <h3>Experience</h3>
                     </div>
@@ -129,83 +149,119 @@
             </div>
         </section>
         
-        <section id="more">
+        <section id="projects">
 
-        <div class="row justify-content-center">
-            <div class="col transparent-box"  style="border:blue solid">
-                1st level Row #1 1st Col
-                <div class="row">
-                    <div class="col" style="border: green solid">
-                        2#1-1
-                        <div class="row">
-                            <div class="col"  style="border: yellow solid">
-                                3#1-1
-                            </div>
-                            <div class="col"  style="border:yellow solid">
-                                3#2-2
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col"  style="border:green solid">
-                        2#1-2
-                        <div class="row">
-                            <div class="col"  style="border: yellow solid">
-                                3#1-1
-                            </div>
-                            <div class="col"  style="border:yellow solid">
-                                3#2-2
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col"  style="border:green solid">
-                        2#1-3
-                        <div class="row">
-                            <div class="col"  style="border: yellow solid">
-                                3#1-1
-                            </div>
-                            <div class="col"  style="border:yellow solid">
-                                3#2-2
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="row" >
-                    <div class="col"  style="border:green solid">
-                        2nd 2nd level row 1st column
-                    </div>
-                    <div class="col"  style="border:green solid">
-                        2nd 2nd level row 2nd Column
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h3 class="transparent-bar rounded">Projects</h3>
                 </div>
             </div>
-            <div class="col"  style="border:blue solid">
-                1st row 2nd col
-                <p>
-                    <h3>Sections to include:</h3>
-                    <ul>
-                        <li>About me</li>
-                        <li>Work (Projects)</li>
-                        <li>Contact</li>
-                    </ul>
-                </p>
-            </div>
-            <div class="col">
-                1st Row 3rd Col
-            </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col" style="border:blue solid">
-                1st level Row #2 Col 1
+            <div class="row justify-content-center">
+                <div class="col-md-5 transparent-box levitate-on-hover">
+                    <a href="../schoolwork/pratice-css.html" target="_blank" class="text-decoration-none">
+                        <div class="card-header">
+                            <div class="rounded picture-reel-1">
+                                <h3 class="with-accent1 transparent-bar">CSS Corner Cafe</h3>   
+                            </div>  
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <p>
+                            A menu page involving floating elements and automatically sizing items.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5 transparent-box levitate-on-hover">
+                    <a href="../schoolwork/nucampsite/index.html" target="_blank" class="text-decoration-none">
+                        <div class="card-header">
+                            <div class="rounded picture-reel-2">
+                                <h3 class="with-accent1 transparent-bar-nav">Nucamp - A new way to camp</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <p>
+                            Website for nucamp coding school that utilizes bootstrap technologies to dynamically align and format web elements.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-6">
-                1st level Row #2 Col 2
-            </div>
-        </div>
             
+        </section>
+        
+        <section id="feedback" hidden>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h3 class="transparent-bar rounded">Feedback</h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="transparent-box" id="feedbackForm">
+                        <form onsubmit="hideFeedbackForm()">
+                            <fieldset>
+                                <legend>Feel free to provide feedback about the site!</legend>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            If you would like to be contacted, leave your name and email below.
+                                            <br/>
+                                            Otherwise just leave a comment and what you do for a living.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="userName" class="col-md-2 col-form-label">User Name:</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="userName" name="userName" placeholder="*Optional*"/>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="userEmail" class="col-md-2 col-form-label">Email:</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="email" id="userName" name="userName" placeholder="*Optional*"/>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="selectProfession" class="col-md-2 col-form-label">What do you do?</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control" id="selectProfession" name="selectProfession" required>
+                                            <option value="">&lt;Select one&gt;</option>
+                                            <option value="recruiter">Recruiter</option>
+                                            <option value="itProfessional">I.T. Professional</option>
+                                            <option value="normalUser">Normal User</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="userFeedback" class="col-md-2 col-form-label">Enter your feedback here:</label>
+                                    <div class="col-md-10">
+                                        <textarea  class="form-control" id="userFeedback" name="userFeedback" rows="10" placeholder="*Required*" required></textarea>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                            <div class="row">
+                                <div class="col offset-2">
+                                    <input class="btn btn-warning " type="submit"/>
+                                </div>
+                                <div class="col col-md-8">
+                                    <button class="btn btn-danger" onclick="hideFeedbackForm()">Cancel</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
     
@@ -217,15 +273,17 @@
                 <div class="col" >
                     <h5 class="with-accent2">Connect:</h4>
                     <a href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> LinkedIn</a>
-                    <a href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> GitHub</a>
-                    <a href="#"><i class="fa-brands fa-instagram fa-xl"></i> Instagram</a>
-                    <a href="#"><i class="fa-brands fa-facebook fa-xl"></i> Facebook</a>
+                    <a class="short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> GitHub</a>
+                    <a class="short-delay-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i> Instagram</a>
+                    <a class="short-delay-3" href="#"><i class="fa-brands fa-facebook fa-xl"></i> Facebook</a>
                 </div>
                 <div class="col">
                     <h5 class="with-accent2">Contact:</h5>
                     <a href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> officialdavidross@gmail.com</a> 
-                    <a href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> +1-555-555-5555</a>
+                    <a class="short-delay-2" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> +1-555-555-5555</a>
+                    <button class="btn btn-warning" onclick="showFeedbackForm()">Send Feedback</button>
                 </div>
+                
 
             </div>
         </div>
@@ -234,8 +292,22 @@
         </div>
     </footer>
     
+    <script>
+        function showFeedbackForm(){
+            document.getElementById("feedback").hidden=false;
+            document.getElementById('feedbackForm').reset();
+            document.getElementById('userName').focus;
+            
+        }
+        function hideFeedbackForm(){
+            document.getElementById("feedback").hidden=true;
+            document.getElementById('feedbackForm').reset();
+
+        }
+    </script>
     <!--Bootstrap script-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
     
 </body>
 </html>
