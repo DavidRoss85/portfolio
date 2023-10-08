@@ -14,8 +14,11 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
         crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="css/styles.css" />
 
-    <link rel="stylesheet" href="CSS/styles.css" />
+    <!-- For debugging -->
+    <link rel="stylesheet" href="../Debug/Tools/CSS/bootstrap-borders-styles.css"/><!--Adds borders for visualization-->
+    
     <title>David Ross - Web Designer</title>
 </head>
 <body class="gradient-background">
@@ -36,8 +39,9 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Wrapped all of the Link names in a ...span data-bs-toggle... to work around a glitch where the navbar would remain open when
-            clicked, and adding those attributes to the anchor or list item would break the navigation link.(<li><a><span>text</span></a></li>) -->
+            <!-- Wrapped all of the Link names in a ...<span data-bs-toggle... to work around a glitch where the navbar would remain open after being
+            clicked. Adding those attributes to the anchor or list item would break the navigation link. 
+            (<li><a><span>text</span></a></li>) -->
             <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
                 <ul class="navbar-nav px-4">
                     <li class="navbar-item levitate short-delay-1"><a href="#" aria-current="true" class="navbar-link active px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</span></a></li>
@@ -51,18 +55,21 @@
     </nav>
 
     <!--Header-->
-    <header class="transparent-bar text-center">
-        <h1>David Ross</h1>
-        <h2>Freelance Web Design</h2> 
+    <header class="container-fluid transparent-bar text-center">
+        <div class="row">
+            <h1 class="col-12">David Ross</h1>
+            <h2 class="col-12">Freelance Web Design</h2> 
+        </div>
     </header>
 
     <!-- Main body -->
     <main class="container-fluid">
-        <section id="intro">
+        
+        <section id="intro"><!-- Introduction-->
             <div class="row justify-content-center pb-5">
                 <div class="col-md-12 zoom-in-from-left" >
-                    <div class="row">
-                        <div class="col-md-4 col-lg-3 pb-3 pt-3">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 col-lg-4 pb-3 pt-3">
                             <img src="images/Icons/Computer-guy-Circle_transparent.png" alt="David Ross" class="img-fluid levitate">
                         </div>
                         <div class="col-md-7 col-lg-8 pt-3">
@@ -84,7 +91,8 @@
             </div>
         </section>
         
-        <section id="details">
+        
+        <section id="details"><!-- Skills-->
             <div class="row justify-content-center">
                 <div class="col py-4 text-center">
                     <h3 class="transparent-bar-center">Skills</h3>
@@ -150,7 +158,8 @@
             </div>
         </section>
         
-        <section id="projects">
+        
+        <section id="projects"><!-- Projects-->
 
             <div class="row justify-content-center">
                 <div class="col py-3 text-center">
@@ -192,7 +201,8 @@
             
         </section>
         
-        <section id="feedback">
+        
+        <section id="feedback"><!-- Feedback (this is hidden at start)-->
             <div class="row justify-content-center">
                 <div class="col d-none" id="feedbackHead">
                     <h3 class="transparent-bar rounded">Feedback</h3>
@@ -265,38 +275,46 @@
         </section>
     </main>
     
-  
+    <!-- Footer -->
     <footer class="text-start" id="footer">
         <hr/>
-        <div class="container">
-            <div class="row transparent-box styled-hyperlink">
-                <div class="col-sm-4 col-md-6" >
-                    <h5 class="with-accent2 text-center">Connect:</h4>
-                    <a href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> LinkedIn</a>
-                    <a class="short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> GitHub</a>
-                    <a class="short-delay-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i> Instagram</a>
-                    <a class="short-delay-3" href="#"><i class="fa-brands fa-facebook fa-xl"></i> Facebook</a>
+        <div class="container-fluid">
+            <div class="row transparent-box styled-hyperlink"> <!--Links-->
+                <div class="col-sm-4 col-md-6" > <!--Connect-->
+                    <div class="row"><!--Header-->
+                        <h5 class="col with-accent2 text-center">Connect:</h4>
+                    </div>
+                    <div class="row"><!--links-->
+                        <a class="col text-center text-nowrap" href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> LinkedIn</a>
+                        <a class="col text-center text-nowrap short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> GitHub</a>
+                        <a class="col text-center text-nowrap short-delay-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i> Instagram</a>
+                        <a class="col text-center text-nowrap short-delay-3" href="#"><i class="fa-brands fa-facebook fa-xl"></i> Facebook</a>
+                    </div>
                 </div>
-                <div class="col-sm-8 col-md-6">
-                    <div class="row">
+                <div class="col-sm-8 col-md-6"><!--Contact-->
+                    <div class="row"> <!--Header-->
                         <div class="col">
                             <h5 class="with-accent2 text-center">Contact:</h5>
-                            <a href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> officialdavidross@gmail.com</a> 
-                            <a class="short-delay-2" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> +1-555-555-5555</a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col text-xl-center">
+                    <div class="row"><!--links-->
+                        <div class="col text-center">
+                            <a class="text-nowrap"href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> officialdavidross@gmail.com</a> 
+                        </div>
+                        <div class="col text-center">
+                            <a class="short-delay-2 text-nowrap" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> +1-555-555-5555</a>
+                        </div>
+                    </div>
+                    <div class="row"><!--feedback button-->
+                        <div class="col text-center">
                             <button class="btn btn-warning levitate short-delay-3" onclick="showFeedbackForm()">Send Feedback</button>
                         </div>
                     </div>
                     
                 </div>
-                
-
             </div>
         </div>
-        <div class="transparent-bar-nav text-center">
+        <div class="transparent-bar-nav text-center"><!--Copyright footer-->
             --Copyright info here--           
         </div>
     </footer>
@@ -323,7 +341,9 @@
         }
     </script>
     <!--Bootstrap script-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+        crossorigin="anonymous">
     </script>
     
 </body>
