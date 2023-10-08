@@ -6,15 +6,17 @@
     <meta name="description" content="David Ross freelance web designer" />
     <!-- Bootstrap library. -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"
+    />
     
     <!--Font Awesome library-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="CSS/styles.css" />
-    <title>David Ross</title>
+    <title>David Ross - Web Designer</title>
 </head>
 <body class="gradient-background">
         
@@ -57,11 +59,6 @@
     <!-- Main body -->
     <main class="container-fluid">
         <section id="intro">
-            <!-- <div class="row justify-content-end">
-                <div class="col-lg-10">
-                    <h3 class="with-accent1 d-none d-md-block d-xl-none pt-5">Who am I?</h3>
-                </div>
-            </div> -->
             <div class="row justify-content-center pb-5">
                 <div class="col-md-12 zoom-in-from-left" >
                     <div class="row">
@@ -90,7 +87,7 @@
         <section id="details">
             <div class="row justify-content-center">
                 <div class="col py-4 text-center">
-                    <h3> </h3>
+                    <h3 class="transparent-bar-center">Skills</h3>
                 </div>
             </div>
 
@@ -195,16 +192,16 @@
             
         </section>
         
-        <section id="feedback" hidden>
+        <section id="feedback">
             <div class="row justify-content-center">
-                <div class="col">
+                <div class="col d-none" id="feedbackHead">
                     <h3 class="transparent-bar rounded">Feedback</h3>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col">
-                    <div class="transparent-box" id="feedbackForm">
-                        <form onsubmit="hideFeedbackForm()">
+                <div class="col d-none" id="feedbackContainer">
+                    <div class="transparent-box" >
+                        <form onsubmit="confirmSubmit()" id="feedbackForm">
                             <fieldset>
                                 <legend>Feel free to provide feedback about the site!</legend>
                                 <div class="row">
@@ -220,14 +217,14 @@
                                 <div class="row">
                                     <label for="userName" class="col-md-2 col-form-label">User Name:</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" id="userName" name="userName" placeholder="*Optional*"/>
+                                        <input class="form-control" type="text" id="userName" name="userName" placeholder="*Optional*" autocomplete="username"/>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <label for="userEmail" class="col-md-2 col-form-label">Email:</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="email" id="userName" name="userName" placeholder="*Optional*"/>
+                                        <input class="form-control" type="email" id="userEmail" name="userEmail" placeholder="*Optional*" autocomplete="email"/>
                                     </div>
                                 </div>
 
@@ -246,7 +243,7 @@
                                 <div class="row">
                                     <label for="userFeedback" class="col-md-2 col-form-label">Enter your feedback here:</label>
                                     <div class="col-md-10">
-                                        <textarea  class="form-control" id="userFeedback" name="userFeedback" rows="10" placeholder="*Required*" required></textarea>
+                                        <textarea  class="form-control" id="userFeedback" name="userFeedback" rows="10" placeholder="*Required*"></textarea>
                                     </div>
                                 </div>
 
@@ -256,7 +253,7 @@
                                     <input class="btn btn-warning " type="submit"/>
                                 </div>
                                 <div class="col col-md-8">
-                                    <button class="btn btn-danger" onclick="hideFeedbackForm()">Cancel</button>
+                                    <button class="btn btn-danger" type="button" onclick="collapseFeedback()">Cancel</button>
                                 </div>
                             </div>
 
@@ -299,21 +296,29 @@
 
             </div>
         </div>
-        <div class="transparent-bar-nav">
-            (n) No rights reserved            
+        <div class="transparent-bar-nav text-center">
+            --Copyright info here--           
         </div>
     </footer>
     
     <script>
         function showFeedbackForm(){
-            document.getElementById("feedback").hidden=false;
-            document.getElementById('feedbackForm').reset();
-            document.getElementById('userName').focus;
+            slideInDMs();
+            document.getElementById("userName").focus;
+            window.location.href="#feedback";
             
         }
-        function hideFeedbackForm(){
-            document.getElementById("feedback").hidden=true;
-            document.getElementById('feedbackForm').reset();
+        function slideInDMs(){
+            document.getElementById("feedbackContainer").className= "col zoom-in-from-left";
+            document.getElementById("feedbackHead").className= "col zoom-in-from-left";
+        }
+        function confirmSubmit(){
+            alert("Thank you for your submission.");
+            collapseFeedback();
+        }
+        function collapseFeedback(){
+            document.getElementById("feedbackContainer").className= "col collapse-out";
+            document.getElementById("feedbackHead").className= "col collapse-out";
 
         }
     </script>

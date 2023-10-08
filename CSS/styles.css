@@ -173,6 +173,12 @@ footer{
     animation-fill-mode: both;
     animation-name: zoom-from-left;
 }
+.collapse-out{
+    animation-duration:.5s ;
+    animation-fill-mode: both;
+    animation-name: collapse-out;
+
+}
 .picture-reel-1, .picture-reel-2, .picture-reel-3, .picture-reel-4{
     width: 100%;
     height:auto;
@@ -228,6 +234,11 @@ footer{
 @keyframes zoom-from-left{
     0% {transform: translateX(-100vw);} 
     100%{transform: translateX(0vw);}
+}
+@keyframes collapse-out{
+    0%{transform:scale(100%);}
+    98%{transform:scaleY(0%);}
+    100%{display:none;}
 }
 
 @keyframes cycle-pics-1{
