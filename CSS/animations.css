@@ -14,13 +14,19 @@
     0% {transform: translateX(-100vw);} 
     100%{transform: translateX(0vw);}
 }
+@keyframes zoom-to-right-disappear{
+    0% {transform: translateX(0vw);} 
+    99%{transform: translateX(+100vw);}
+    100%{display:none;}
+}
+
 @keyframes collapse-out{
     0%{transform:scale(100%);}
     98%{transform:scaleY(0%);}
     100%{display:none;}
 }
 
-@keyframes cycle-pics-1{
+/* @keyframes cycle-pics-1{
     0%{background-image: url("../images/Corner_Cafe/CSS-Cafe.png");}
     25%{background-image: url("../images/Corner_Cafe/CSS-Cafe.png");}
     50%{background-image: url("../images/Corner_Cafe/CSS-Cafe.png");}
@@ -46,5 +52,5 @@
     25%{background-image: url("../images/Earth.jpg");}
     50%{background-image: url("../images/CSS-Cafe.png");}
     75%{background-image: url("../images/tree-by-Bessi-pixbay.jpg");}
-    100%{background-image: url("../images/tree-by-Bessi-pixbay.jpg");}
-}
+    100%{background-image: url("../images/tree-by-Bessi-pixbay.jpg");} 
+}*/

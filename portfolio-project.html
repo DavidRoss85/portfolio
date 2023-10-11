@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="David Ross freelance web designer" />
+    <meta name="description" content="David Ross freelance web developer" />
     <!-- Bootstrap library. -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"
@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- For debugging -->
-    <link rel="stylesheet" href="../Debug/Tools/CSS/bootstrap-borders-styles.css"/><!--Adds borders for visualization-->
+    <!--<link rel="stylesheet" href="../Debug/Tools/CSS/bootstrap-borders-styles.css"/>--><!--Adds borders for visualization-->
     
-    <title>David Ross - Web Designer</title>
+    <title>David Ross - Web Developer</title>
 </head>
 <body class="gradient-background">
         
@@ -35,6 +35,13 @@
                         <text class="svg-text-2" x="419.808" y="147.388" id="e5_texte" transform="matrix(16.0721 0 0 16.0721 -6151.71 -1975.78)" textLength="16.399152564561803">}</text>
                     </svg>
                 </a>
+            <!--for debug (Displays BS viewport)-->
+            <span class="d-sm-none">XS View</span>
+            <span class="d-none d-sm-inline d-md-none">SM View</span>
+            <span class="d-none d-md-inline d-lg-none">MD View</span>
+            <span class="d-none d-lg-inline d-xl-none">LG View</span>
+            <span class="d-none d-xl-inline">XL View</span>
+
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -58,7 +65,7 @@
     <header class="container-fluid transparent-bar text-center">
         <div class="row">
             <h1 class="col-12">David Ross</h1>
-            <h2 class="col-12">Freelance Web Design</h2> 
+            <h2 class="col-12">Freelance Web Developer</h2> 
         </div>
     </header>
 
@@ -103,7 +110,7 @@
                 <div class="col-md-5 col-lg-3 transparent-box card levitate-on-hover">
                     <!--place some custom animation here (preferably canvas)-->
                     <div class="card-header">
-                        <img class="img-fluid" src="images/Earth.jpg" alt=""/>
+                        <img class="img-fluid" src="" alt=""/>
                         <h3>Platform</h3>
                     </div>
                     <div class="card-body">
@@ -122,7 +129,7 @@
                 <div class="col-md-5 col-md-5 col-lg-3 transparent-box card levitate-on-hover">
                     <!--place some custom animation here (preferably canvas)-->
                     <div class="card-header">
-                            <img class="img-fluid" src="images/tree-by-Bessi-pixbay.jpg" alt=""/>
+                            <img class="img-fluid" src="" alt=""/>
                             <!-- Image courtesy of pixaby.com royaly free art. Artist: Bessi - bess.hamiti@gmail.com -->
                             <h3>Skills</h3>
                         </div>
@@ -140,7 +147,7 @@
                     
                 <div class="col-md-5 col-lg-3 transparent-box card levitate-on-hover">
                     <div class="card-header">
-                        <img class="img-fluid" src="images/Earth.jpg" alt="" />
+                        <img class="img-fluid" src="" alt="" />
                         <!-- Image courtesy of pixabay.com royalty free art. Artist: Arek Socha from Pixabay -->
                         <h3>Experience</h3>
                     </div>
@@ -161,54 +168,86 @@
         
         <section id="projects"><!-- Projects-->
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center"><!--Projects Header-->
                 <div class="col py-3 text-center">
                     <h3 class="transparent-bar-center">Projects</h3>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center"><!--Project bubbles-->
                 <!--CSS Cafe-->
-                <div class="col-5 col-sm-3 col-md-2 transparent-box levitate short-delay-2">
+                <div class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
+                    description text
+                </div>
+                <div class="col-4 col-lg-3 transparent-circle levitate container-like-ratio circle-image">
                     <a href="../schoolwork/pratice-css.html" target="_blank" class="text-decoration-none">
-                        <div class="card-header">
-                            <div class="rounded picture-reel-1">
-                                <h3 class="with-accent1 transparent-center">CSS Cafe</h3>   
-                            </div>  
+                        
+                        <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/Corner_Cafe/CSS-Cafe.png" alt="..." class="d-block">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Corner_Cafe/CSS-Cafe.png" alt="..." class="d-block">
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <!--Nucamp Website-->
-                <div class="col-5 col-sm-3 col-md-2 transparent-box levitate short-delay-3">
+                <div class="col-4 col-lg-3 transparent-circle levitate short-delay-1 container-like-ratio circle-image">
                     <a href="../schoolwork/nucampsite/index.html" target="_blank" class="text-decoration-none">
-                        <div class="card-header">
-                            <div class="rounded picture-reel-2">
-                                <h3 class="with-accent1 transparent-bar-center" >Nucamp</h3>
+                        
+                        <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/Nucamp/nucamp1.png" alt="..." class="d-block">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Nucamp/nucamp2.png" alt="..." class="d-block">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Nucamp/nucamp3.png" alt="..." class="d-block">
+                                </div>
                             </div>
                         </div>
+                        
                     </a>
                 </div>
-                <!--Just a placeholder for now-->
-                <div class="col-5 col-sm-3 col-md-2 transparent-box levitate short-delay-1">
-                    <a href="../Date_Collab/datingForm.html" target="_blank" class="text-decoration-none">
-                        <div class="card-header">
-                            <div class="rounded picture-reel-3">
-                                <h3 class="with-accent1 transparent-bar-center">Placeholder</h3>
-                            </div>
-                        </div>
-                    </a>
+                <div class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
+                    description text for Nucamp
+                </div>
 
+                <!--Just a placeholder for now-->
+                <div class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
+                    description text for placeholder
                 </div>
-            
+
+                <div class="col-4 col-lg-3 transparent-circle levitate short-delay-2 container-like-ratio circle-image">
+                  
+                        
+                        <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/Backgrounds/Earth.jpg" alt="..." class="d-block">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Backgrounds/tree-by-Bessi-pixbay.jpg" alt="..." class="d-block">
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
         </section>
         
         
         <section id="feedback"><!-- Feedback (this is hidden at start)-->
             <div class="row justify-content-center">
                 <div class="col d-none" id="feedbackHead">
-                    <h3 class="transparent-bar rounded">Feedback</h3>
+                    <h3 class="transparent-bar rounded text-center">Feedback</h3>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center"><!--Feedback form-->
                 <div class="col d-none" id="feedbackContainer">
                     <div class="transparent-box" >
                         <form onsubmit="confirmSubmit()" id="feedbackForm">
@@ -253,7 +292,7 @@
                                 <div class="row">
                                     <label for="userFeedback" class="col-md-2 col-form-label">Enter your feedback here:</label>
                                     <div class="col-md-10">
-                                        <textarea  class="form-control" id="userFeedback" name="userFeedback" rows="10" placeholder="*Required*"></textarea>
+                                        <textarea  class="form-control" id="userFeedback" name="userFeedback" rows="10" placeholder="*Required*" required></textarea>
                                     </div>
                                 </div>
 
@@ -263,7 +302,7 @@
                                     <input class="btn btn-warning " type="submit"/>
                                 </div>
                                 <div class="col col-md-8">
-                                    <button class="btn btn-danger" type="button" onclick="collapseFeedback()">Cancel</button>
+                                    <button class="btn btn-danger" type="button" onclick="zoomOutFeedback()">Cancel</button>
                                 </div>
                             </div>
 
@@ -332,12 +371,15 @@
         }
         function confirmSubmit(){
             alert("Thank you for your submission.");
-            collapseFeedback();
+           zoomOutFeedback();
         }
-        function collapseFeedback(){
-            document.getElementById("feedbackContainer").className= "col collapse-out";
-            document.getElementById("feedbackHead").className= "col collapse-out";
+        function zoomOutFeedback(){
+            document.getElementById("feedbackContainer").className= "col zoom-out-to-right";
+            document.getElementById("feedbackHead").className= "col zoom-out-to-right";
 
+        }
+        function makeBig(itemId){
+            document.getElementById(itemId).className+=" zoom-out-to-right";
         }
     </script>
     <!--Bootstrap script-->
