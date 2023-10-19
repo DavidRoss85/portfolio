@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Web Dev portfolio page",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel --open",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidRoss85/portfolio.git"
+  },
+  "author": "David Ross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidRoss85/portfolio/issues"
+  },
+  "homepage": "https://github.com/DavidRoss85/portfolio#readme",
+  "devDependencies": {
+    "parcel": "^2.10.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "bootstrap": "^5.2.3"
+  }
+}
