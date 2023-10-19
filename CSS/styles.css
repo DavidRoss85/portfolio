@@ -26,13 +26,17 @@
 html{
     scroll-behavior: smooth;
 }
+
 body{
-    /* text-align: center; */
     color: var(--global-font-color)
 }
 
 ul {
     list-style-type: none;
+}
+
+.skills-list li {
+    padding:1em;
 }
 
 .logo { 
@@ -143,85 +147,6 @@ ul {
         
 }
 
-.levitate-on-hover:hover, .levitate, footer a {
-    &.short-delay-1{
-        animation-delay: .25s;
-    }
-    &.short-delay-2{
-        animation-delay: .50s;
-    }
-    &.short-delay-3{
-        animation-delay: .75s;
-    }
-    &.short-delay-4{
-        animation-delay: 1s;
-    }
-    &.short-delay-5{
-        animation-delay: 1.25s;
-    }
-
-    animation-duration:1s ;
-    animation-fill-mode: both;
-    animation-direction:alternate;
-    animation-iteration-count:infinite;
-    animation-timing-function: ease-in-out;
-    animation-name: levitate;
-    
-}
-.zoom-in-from-left {
-    animation-duration:.5s ;
-    animation-fill-mode: both;
-    animation-name: zoom-from-left;
-}
-.collapse-out{
-    animation-duration:.5s ;
-    animation-fill-mode: both;
-    animation-name: collapse-out;
-}
-.zoom-out-to-right{
-    animation-duration:.5s ;
-    animation-fill-mode: both;
-    animation-name: zoom-to-right-disappear;
-}
-
-/* .picture-reel-1, .picture-reel-2, .picture-reel-3, .picture-reel-4{
-    width: 100%;
-    height:20vw;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    &:hover{
-        animation-duration:5s ;
-        animation-fill-mode: both;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-    }
-} */
-/* .picture-reel-1{
-    background-image: url("../images/Corner_Cafe/CSS-Cafe.png");
-    &:hover{
-        animation-name: cycle-pics-1;
-    }
-}
-.picture-reel-2{
-    background-image: url("../images/Nucamp/nucamp1.png");
-    &:hover{
-        animation-name: cycle-pics-2;
-    }
-}
-.picture-reel-3{
-    background-image: url("../images/Nucamp/nucamp1.png");
-    &:hover{
-        animation-name: cycle-pics-3;
-    }
-}
-.picture-reel-4{
-    background-image: url("../images/Nucamp/nucamp1.png");
-    &:hover{
-        animation-name: cycle-pics-4;
-    }
-} */
-
 .match-height-to-width {
 	position: relative;
     padding-bottom: 100%;
@@ -231,7 +156,15 @@ ul {
 .container-like-ratio img {
 
     width: 100%;
-    height: 24vw;
+    /* height: 24vw; */
     object-fit: contain;
 
+}
+
+#project01, #project02, #project03 {
+    transition: width 1s;
+    min-height: 24vw;
+    max-width: 1000px;
+    max-height: 1000px;
+    /* transition: height 1s linear; */
 }

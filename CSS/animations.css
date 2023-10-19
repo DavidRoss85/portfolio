@@ -26,31 +26,68 @@
     100%{display:none;}
 }
 
-/* @keyframes cycle-pics-1{
-    0%{background-image: url("../images/Corner_Cafe/CSS-Cafe.png");}
-    25%{background-image: url("../images/Corner_Cafe/CSS-Cafe.png");}
-    50%{background-image: url("../images/Corner_Cafe/CSS-Cafe.png");}
-    75%{background-image: url("../images/Corner_Cafe/CSS-Cafe.png");}
-    100%{background-image: url("../images/Corner_Cafe/CSS-Cafe.png");}
+@keyframes shake-side-to-side{
+    0% {transform: translateX(2%);} 
+    25% {transform: translateX(-2%);} 
+    50% {transform: translateX(2%);} 
+    75% {transform: translateX(-2%);} 
+    100% {transform: translateX(2%);} 
 }
-@keyframes cycle-pics-2{
-    0%{background-image: url("../images/Nucamp/nucamp1.png");}
-    25%{background-image: url("../images/Nucamp/nucamp2.png");}
-    50%{background-image: url("../images/Nucamp/nucamp3.png");}
-    75%{background-image: url("../images/Nucamp/nucamp1.png");}
-    100%{background-image: url("../images/Nucamp/nucamp2.png");}
+
+@keyframes expand-and-center-window{
+    100%{transform:scale(2); }
+    /* 100%{transform: scaleX(2) scaleY(2) translateY(1vw);} */
+    
 }
-@keyframes cycle-pics-3{
-    0%{background-image: url("../images/Nucamp_aboutus.png");}
-    25%{background-image: url("../images/Earth.jpg");}
-    50%{background-image: url("../images/CSS-Cafe.png");}
-    75%{background-image: url("../images/tree-by-Bessi-pixbay.jpg");}
-    100%{background-image: url("../images/tree-by-Bessi-pixbay.jpg");}
+
+.levitate-on-hover:hover, .levitate, footer a {
+    &.short-delay-1{
+        animation-delay: .25s;
+    }
+    &.short-delay-2{
+        animation-delay: .50s;
+    }
+    &.short-delay-3{
+        animation-delay: .75s;
+    }
+    &.short-delay-4{
+        animation-delay: 1s;
+    }
+    &.short-delay-5{
+        animation-delay: 1.25s;
+    }
+
+    animation-duration:1s ;
+    animation-fill-mode: both;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in-out;
+    animation-name: levitate;
+    
 }
-@keyframes cycle-pics-4{
-    0%{background-image: url("../images/Nucamp_aboutus.png");}
-    25%{background-image: url("../images/Earth.jpg");}
-    50%{background-image: url("../images/CSS-Cafe.png");}
-    75%{background-image: url("../images/tree-by-Bessi-pixbay.jpg");}
-    100%{background-image: url("../images/tree-by-Bessi-pixbay.jpg");} 
-}*/
+.zoom-in-from-left {
+    animation-duration:.5s ;
+    animation-fill-mode: both;
+    animation-name: zoom-from-left;
+}
+.collapse-out{
+    animation-duration:.5s ;
+    animation-fill-mode: both;
+    animation-name: collapse-out;
+}
+.zoom-out-to-right{
+    animation-duration:.5s ;
+    animation-fill-mode: both;
+    animation-name: zoom-to-right-disappear;
+}
+.shake-sideways{
+    animation-duration:.2s ;
+    animation-fill-mode: both;
+    animation-name: shake-side-to-side;
+}
+
+.test-expand{
+    animation-duration:2s;
+    animation-fill-mode:both;
+    animation-name: expand-and-center-window;
+}
