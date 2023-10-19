@@ -40,7 +40,7 @@ ul {
     padding:1em;
 }
 .text-purple {
-    color: var(--c-sharp-purple);
+    color: var(--c-sharp-purple)
 }
 .logo { 
     & svg{
@@ -57,7 +57,7 @@ ul {
         fill:hotpink;
         font-family:Courier New;
         font-size:30px;
-        font-weight:normal"
+        font-weight:"normal"
     }
     & circle {
         opacity:.6;

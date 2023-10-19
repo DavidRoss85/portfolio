@@ -1,15 +1,9 @@
-@webkit-keyframes levitate{
-    0%{-webkit-transform: translateY(+5%);}
-    100%{-webkit-transform: translateY(-5%);} 
-}
+
 @keyframes levitate{
     0%{transform: translateY(+5%);}
     100%{transform: translateY(-5%);} 
 }
-@webkit-keyframes zoom-from-left{
-    0% {-webkit-transform: translateX(-100vw);} 
-    100%{-webkit-tranform: translateX(0vw);}
-}
+
 @keyframes zoom-from-left{
     0% {transform: translateX(-100vw);} 
     100%{transform: translateX(0vw);}
