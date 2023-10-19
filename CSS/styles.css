@@ -21,6 +21,7 @@
     --nav-hover-color:rgba(255,0,0,1);
 
     --logo-width:40px;
+    --c-sharp-purple: rgb(114, 21, 114);
 }
 
 html{
@@ -38,7 +39,9 @@ ul {
 .skills-list li {
     padding:1em;
 }
-
+.text-purple {
+    color: var(--c-sharp-purple);
+}
 .logo { 
     & svg{
         
