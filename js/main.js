@@ -13,7 +13,7 @@ function showFeedbackForm(){
     document.getElementById("userName").focus;
     window.location.href="#feedback";
     
-}
+};
 function slideInDMs(){
     feedbackWindow.classList.add("zoom-in-from-left");
     feedbackWindow.classList.remove("d-none"); 
@@ -24,11 +24,11 @@ function slideInDMs(){
     feedbackHeader.classList.remove("zoom-out-to-right");
 
     console.log(feedbackWindow.className);
-}
+};
 function confirmSubmit(){
     alert("Thank you for your submission.");
     zoomOutFeedback();
-}
+};
 function zoomOutFeedback(){
     feedbackWindow.classList.add("zoom-out-to-right");
     feedbackWindow.classList.remove("zoom-in-from-left");
@@ -37,7 +37,7 @@ function zoomOutFeedback(){
     feedbackHeader.classList.add("zoom-out-to-right");
 
     console.log(feedbackWindow.className);
-}
+};
 function makeMeBig(itemId){
     if (lastExpandedWindowId == itemId){
         makeMeNormal(lastExpandedWindowId);
@@ -54,14 +54,14 @@ function makeMeBig(itemId){
         else{
             document.getElementById(itemId).style.width = "100vw";
             document.getElementById(itemId).style.height = "100vw";
-        }
+        };
         document.getElementById(itemId).scrollIntoView(false);
         // window.location.href = "#" +itemId;
         // window.scrollBy(0,-30);
         lastExpandedWindowId = itemId;
-    }
+    };
     console.log(document.getElementById(itemId).style.width);
-}
+};
 
 function makeMeNormal(itemId){
     if ( itemId !=""){
@@ -70,11 +70,11 @@ function makeMeNormal(itemId){
     document.getElementById(itemId+"Text").classList.toggle("d-none");
     lastExpandedWindowId="";
     console.log("makeMeNormal");
-    }
-}
+    };
+};
 function shakeObjectSideways(elementToShake){
-    elementToShake=document.getElementsByClassName
-}
+    elementToShake=document.getElementsById("project01");
+};
 
 
 
