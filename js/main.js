@@ -3,14 +3,16 @@
 const feedbackWindow = document.getElementById("feedbackContainer");
 const feedbackHeader = document.getElementById("feedbackHead");
 var lastExpandedWindowId = "";
+var clickedABubble = false;
 
-
+//Starts the feedback form animation
 function showFeedbackForm(){
     slideInDMs();
     document.getElementById("userName").focus;
     window.location.href="#feedback";
     
 };
+//Zooms in the feedback window
 function slideInDMs(){
     feedbackWindow.classList.add("zoom-in-from-left");
     feedbackWindow.classList.remove("d-none"); 
@@ -25,7 +27,7 @@ function confirmSubmit(){
     alert("Thank you for your submission.");
     zoomOutFeedback();
 };
-
+//Zooms out the feedback window
 function zoomOutFeedback(){
     feedbackWindow.classList.add("zoom-out-to-right");
     feedbackWindow.classList.remove("zoom-in-from-left");
@@ -38,6 +40,8 @@ function zoomOutFeedback(){
 
 //Expands the windows when clicked:
 function makeMeBig(itemId){
+    clickedABubble=true;
+
     const thisItem = document.getElementById(itemId);
     const screenWidth = window.innerWidth;
     const screenHeight= window.innerHeight;
@@ -46,13 +50,17 @@ function makeMeBig(itemId){
     var moveVert = "1vw";
 
     if (lastExpandedWindowId == itemId){
+        //If you click the same window, it will navigate to that page
         makeMeNormal(lastExpandedWindowId);
-        //window.location.href = projectURL(itemId);
+        window.location.href = projectURL(itemId);
     }
     else{
+        // Otherwise Shrink whatever the last window was
         makeMeNormal(lastExpandedWindowId);
+        //Then expand the clicked window
         thisItem.classList.remove("levitate");
 
+        //Site will attempt to scale based on viewport
         if (screenHeight > screenWidth) {
             document.documentElement.style.setProperty("--bubble-scale-x", widthRatio * 0.75);
             document.documentElement.style.setProperty("--bubble-scale-y", widthRatio * 0.75);
@@ -71,32 +79,28 @@ function makeMeBig(itemId){
         document.documentElement.style.setProperty("--bubble-translate-x", moveHori);
         thisItem.classList.add("expand-center");
     
-        console.log("Yes");
-        // thisItem.scrollIntoView(false);
-        // window.location.href = "#" +itemId;
-        // window.scrollBy(0,-30);
         lastExpandedWindowId = itemId;
     };
-    console.log("Element(x,y,width,height): " + myDimensions(itemId));
-    console.log("Document Size: " + screenWidth + " " + screenHeight);
-    console.log("Vert: " + moveVert);
-    console.log("Hori: " + moveHori);
-};
 
+};
+//Resets the bubble windows
 function makeMeNormal(itemId){
     const thisItem = document.getElementById(itemId);
 
-    if ( itemId !=""){
+    if ( itemId !== ""){
         thisItem.classList.remove("expand-center");
         thisItem.classList.add("levitate");
         lastExpandedWindowId="";
 
     };
 };
+
+
 function shakeObjectSideways(elementToShake){
     elementToShake=document.getElementsById("project01");
 };
 
+//Calculates dimensions of bubble windows for animations
 function myWidth(itemId){
     return document.getElementById(itemId).clientWidth;
 };
@@ -113,7 +117,7 @@ function myDimensions(itemId){
     return [myLeft(itemId),myTop(itemId),myWidth(itemId),myHeight(itemId)];
 };
 
-//Horizontal
+//Calculates how much to move the window horizontally
 function calculateHori(itemId){
     const screenWidth = window.innerWidth;
     var calcOne = 1;
@@ -123,10 +127,10 @@ function calculateHori(itemId){
     calcOne = calcOne - myLeft(itemId);
     calcOne = calcOne/screenWidth
 
-    return calcOne * 50;
+    return calcOne * 30;
 };
 
-//Vertical
+//Calculates how much to move thie window Vertically
 function calculateVert(itemId){
     const screenWidth = window.innerWidth;
     const screenHeight= window.innerHeight;
@@ -145,7 +149,7 @@ function calculateVert(itemId){
 };
 
 
-
+//Place websites for each bubble here
 function projectURL(refId){
     var urlAddress = "";
 
@@ -166,7 +170,17 @@ function projectURL(refId){
     return urlAddress;
 };
 
-
+//Listens for a home click to make windows small
+function HomeClick(){
+    if (clickedABubble==false){
+        if (lastExpandedWindowId !=="") {
+            makeMeNormal(lastExpandedWindowId);
+        }
+    }
+    else {
+        clickedABubble=false;
+    }
+}
 
 
 // switcher.addEventListener('click', function() {
