@@ -22,7 +22,11 @@
 
     --logo-width:40px;
     --c-sharp-purple: rgb(114, 21, 114);
+
+
 }
+
+
 
 html{
     scroll-behavior: smooth;
@@ -165,7 +169,7 @@ ul {
 }
 
 #project01, #project02, #project03 {
-    transition: width 1s;
+    transition: transform 1s;
     min-height: 24vw;
     max-width: 1000px;
     max-height: 1000px;

@@ -1,3 +1,11 @@
+:root {
+    --bubble-scale-x: 2.5;
+    --bubble-scale-y: 2.5;
+    --bubble-translate-x: 10vw;
+    --bubble-translate-y: 10vw;
+
+
+}
 
 @keyframes levitate{
     0%{transform: translateY(+5%);}
@@ -28,11 +36,13 @@
     100% {transform: translateX(2%);} 
 }
 
-@keyframes expand-and-center-window{
-    100%{transform:scale(2); }
-    /* 100%{transform: scaleX(2) scaleY(2) translateY(1vw);} */
+@keyframes expand-window{
+    
+    /* 100%{transform:scale(2); } */
+    100%{transform: scale(var(--bubble-scale-x), var(--bubble-scale-y)) translate(var(--bubble-translate-x), var(--bubble-translate-y));}
     
 }
+
 
 .levitate-on-hover:hover, .levitate, footer a {
     &.short-delay-1{
@@ -80,8 +90,10 @@
     animation-name: shake-side-to-side;
 }
 
-.test-expand{
-    animation-duration:2s;
+.expand-center{
+    z-index: 1;
+    animation-duration:1s;
     animation-fill-mode:both;
-    animation-name: expand-and-center-window;
+    animation-iteration-count: initial;
+    animation-name: expand-window; 
 }
