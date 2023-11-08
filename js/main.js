@@ -1,9 +1,10 @@
-'use strict';
-// const switcher = document.querySelector('.btn');
+"use strict";
 const feedbackWindow = document.getElementById("feedbackContainer");
 const feedbackHeader = document.getElementById("feedbackHead");
 let lastExpandedWindowId = "";
 let clickedABubble = false;
+
+
 
 //Starts the feedback form animation
 function showFeedbackForm(){
