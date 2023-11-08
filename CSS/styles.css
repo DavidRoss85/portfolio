@@ -140,6 +140,22 @@ ul {
         }
     }
 }
+.breadcrumb {
+    & a{
+        
+        text-decoration: none;
+        color:var(--nav-link-color);
+        &:hover, &:hover >*{
+            transition: .5s;
+            color:var(--nav-hover-color);
+        }
+        
+    }
+    & .active{
+        color:var(--nav-hover-color);
+    }
+}
+
 .with-accent1{
     color: var(--accent-color1);
 }

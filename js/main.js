@@ -144,15 +144,15 @@ function projectURL(refId){
     switch (refId) {
         case "project01":
             urlAddress="projectdisplay.html";
-            localStorage.setItem("pageToDisplay","../../schoolwork/practice/pratice-css.html");
+            localStorage.setItem("pageToDisplay","");//"../../schoolwork/practice/pratice-css.html");
             break;
         case "project02":
             urlAddress="projectdisplay.html";
-            localStorage.setItem("pageToDisplay","../../schoolwork/nucampsite/index.html");
+            localStorage.setItem("pageToDisplay","");//"../../schoolwork/nucampsite/index.html");
             break;
         case "project03":
             urlAddress="projectdisplay.html";
-            localStorage.setItem("pageToDisplay","../../coffeeshop/index.html");
+            localStorage.setItem("pageToDisplay","");//"../../coffeeshop/index.html");
             break;
         default:
             urlAddress="#";
@@ -172,9 +172,9 @@ function HomeClick(){
     }
 }
 
+//This fuction passes the page to display to the project page
 function getDisplayPage(itemId){
     const pageToDisplay = localStorage.getItem("pageToDisplay");
-
     document.getElementById(itemId).setAttribute("src",pageToDisplay);
 }
 // switcher.addEventListener('click', function() {
