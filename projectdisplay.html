@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="David Ross freelance web developer" />
+    <link rel="icon" type="image/x-icon" href="images/Icons/Computer_guy.png"/>
+
+    <!-- Bootstrap CDN library. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"
+    />
+    
+    <!--Font Awesome CDN library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- For debugging --><!--Adds borders for visualization-->
+    <!-- <link rel="stylesheet" href="../Debug/Tools/CSS/bootstrap-borders-styles.css"/> -->
+
+    <!-- Bootstrap Self Contained -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <!-- Fontawesome Self Contained -->
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"/>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/brands.css"/>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/solid.css"/>    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    <title>David Ross - Web Developer</title>
+</head>
+<body class="gradient-background" onload="getDisplayPage('project-frame')">
+    
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md transparent-bar-nav navbar-dark sticky-top styled-hyperlink">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand levitate short-delay-5 logo" role="logo">
+                <!--logo-->
+                <svg class="px-0 mx-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="230 0 580 580" preserveAspectRatio="xMinYMin meet" width="50px" alt="logo">
+                    <circle id="e1_circle" cx="528.181" cy="284.822" r="265.87" transform="matrix(1.12493 0 0 1.12493 -68.9927 -31.5783)"/>
+                    <text class="svg-text-1" x="409.111" y="152.031" id="e6_texte" transform="matrix(9.04567 0 0 9.04567 -3341.27 -1030.38)">dR</text>
+                    <text class="svg-text-2" x="392.274" y="147.587" id="e3_texte" transform="matrix(16.0779 0 0 16.0779 -6144.85 -1974.69)" textLength="16.399152564561803">{</text>
+                    <text class="svg-text-2" x="419.808" y="147.388" id="e5_texte" transform="matrix(16.0721 0 0 16.0721 -6151.71 -1975.78)" textLength="16.399152564561803">}</text>
+                </svg>
+            </a>
+            
+            <!--for debug (Displays BS viewport)-->
+            <!-- <span class="d-sm-none">XS</span>
+            <span class="d-none d-sm-inline d-md-none">SM</span>
+            <span class="d-none d-md-inline d-lg-none">MD</span>
+            <span class="d-none d-lg-inline d-xl-none">LG</span>
+            <span class="d-none d-xl-inline">XL</span>
+            <span class="d-inline">&nbsp;View</span> -->
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Wrapped all of the Link names in a ...<span data-bs-toggle... to work around a glitch where the navbar would remain open after being
+            clicked. Adding those attributes to the anchor or list item would break the navigation link. 
+            (<li><a><span>text</span></a></li>) -->
+            <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+                <ul class="navbar-nav px-4">
+                    <li class="navbar-item levitate short-delay-1"><a href="index.html" aria-current="true" class="navbar-link active px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</span></a></li>
+                    <li class="navbar-item levitate short-delay-2"><a href="index.html/#intro" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</span></a></li>
+                    <li class="navbar-item levitate short-delay-3"><a href="index.html/#details" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Skills</span></a></li>
+                    <li class="navbar-item levitate short-delay-4"><a href="index.html/#projects" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</span></a></li>
+                    <li class="navbar-item levitate short-delay-5"><a href="index.html/#footer" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Main body-->
+    <main class="container-fluid">
+        <div class="row">
+                <iframe id="project-frame" src="../schoolwork/nucampsite/index.html" class="col-12 project-window-iframe">
+                </iframe>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-start" id="footer">
+        <hr/>
+        <div class="container-fluid">
+            <div class="row transparent-box styled-hyperlink"> <!--Links-->
+                <div class="col-sm-4 col-md-6" > <!--Connect-->
+                    <div class="row"><!--Header-->
+                        <h4 class="col with-accent2 text-center">Connect:</h4>
+                    </div>
+                    <div class="row"><!--links-->
+                        <a class="col text-center text-nowrap" href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> LinkedIn</a>
+                        <a class="col text-center text-nowrap short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> GitHub</a>
+                        <a class="col text-center text-nowrap short-delay-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i> Instagram</a>
+                        <a class="col text-center text-nowrap short-delay-3" href="#"><i class="fa-brands fa-facebook fa-xl"></i> Facebook</a>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-6"><!--Contact-->
+                    <div class="row"> <!--Header-->
+                        <div class="col">
+                            <h5 class="with-accent2 text-center">Contact:</h5>
+                        </div>
+                    </div>
+                    <div class="row"><!--links-->
+                        <div class="col text-center">
+                            <a class="text-nowrap"href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> officialdavidross@gmail.com</a> 
+                        </div>
+                        <div class="col text-center">
+                            <a class="short-delay-2 text-nowrap" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> +1-555-555-5555</a>
+                        </div>
+                    </div>
+                    <!--feedback button
+                    <div class="row">
+                        <div class="col text-center">
+                            <button class="btn btn-warning levitate short-delay-3" onclick="showFeedbackForm()">Send Feedback</button>
+                        </div>
+                    </div>-->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="transparent-bar-nav text-center"><!--Copyright footer-->
+            --Copyright info here--           
+        </div>
+    </footer>
+    
+    <!-- Bootstrap Self Contained JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js">
+    </script>
+
+
+    <script src="js/main.js">
+    </script>
+
+    <!--Bootstrap script online-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+        crossorigin="anonymous">
+    </script> -->
+</body>

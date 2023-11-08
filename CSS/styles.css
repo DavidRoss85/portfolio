@@ -23,6 +23,7 @@
     --logo-width:40px;
     --c-sharp-purple: rgb(114, 21, 114);
 
+    --project-window-height: 800px;
 
 }
 
@@ -40,6 +41,9 @@ ul {
     list-style-type: none;
 }
 
+.project-window-iframe {
+    height: 75vh;
+}
 .skills-list li {
     padding:1em;
 }
