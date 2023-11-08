@@ -4,7 +4,6 @@ const feedbackWindow = document.getElementById("feedbackContainer");
 const feedbackHeader = document.getElementById("feedbackHead");
 let lastExpandedWindowId = "";
 let clickedABubble = false;
-let projectDisplayAddress = "";
 
 //Starts the feedback form animation
 function showFeedbackForm(){
@@ -145,14 +144,15 @@ function projectURL(refId){
     switch (refId) {
         case "project01":
             urlAddress="projectdisplay.html";
-            projectDisplayAddress = "index.html"
+            localStorage.setItem("pageToDisplay","../../schoolwork/practice/pratice-css.html");
             break;
         case "project02":
             urlAddress="projectdisplay.html";
-            projectDisplayAddress="../../schoolwork/nucampsite/index.html";
+            localStorage.setItem("pageToDisplay","../../schoolwork/nucampsite/index.html");
             break;
         case "project03":
-            urlAddress="#";
+            urlAddress="projectdisplay.html";
+            localStorage.setItem("pageToDisplay","../../coffeeshop/index.html");
             break;
         default:
             urlAddress="#";
@@ -173,8 +173,9 @@ function HomeClick(){
 }
 
 function getDisplayPage(itemId){
-    // document.getElementById(itemId).setAttribute("src",projectDisplayAddress);
-    // console.log('Web URL: ' + projectDisplayAddress);
+    const pageToDisplay = localStorage.getItem("pageToDisplay");
+
+    document.getElementById(itemId).setAttribute("src",pageToDisplay);
 }
 // switcher.addEventListener('click', function() {
 //     document.body.classList.toggle('light-theme');
