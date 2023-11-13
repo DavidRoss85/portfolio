@@ -109,7 +109,7 @@ function makeMeNormal(itemId){
 
 
 function shakeObjectSideways(elementToShake){
-    elementToShake=document.getElementsById("project01");
+    elementToShake=document.getElementsById(PROJECT_ID[0]);
 }
 
 //Calculates dimensions of bubble windows for animations
@@ -159,15 +159,15 @@ function projectURL(refId){
     let urlAddress = "#";
 
     switch (refId) {
-        case "project01":
+        case PROJECT_ID[0]:
             urlAddress="projectdisplay.html";
             localStorage.setItem("pageToDisplay","");//"../../schoolwork/practice/pratice-css.html");
             break;
-        case "project02":
+        case PROJECT_ID[1]:
             urlAddress="projectdisplay.html";
-            localStorage.setItem("pageToDisplay","");//"../../schoolwork/nucampsite/index.html");
+            localStorage.setItem("pageToDisplay","https://davidross-nucampsite-01.web.app/index.html");//"../../schoolwork/nucampsite/index.html");
             break;
-        case "project03":
+        case PROJECT_ID[2]:
             urlAddress="projectdisplay.html";
             localStorage.setItem("pageToDisplay","");//"../../coffeeshop/index.html");
             break;
