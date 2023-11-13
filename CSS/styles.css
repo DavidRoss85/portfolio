@@ -24,6 +24,7 @@
     --c-sharp-purple: rgb(114, 21, 114);
 
     --project-window-height: 800px;
+    --project-window-text-size: 2vw;
 
 }
 
@@ -186,6 +187,10 @@ ul {
     /* height: 24vw; */
     object-fit: contain;
 
+}
+
+.carousel-caption p {
+    font-size: var(--project-window-text-size);
 }
 
 #project01, #project02, #project03 {
