@@ -1,10 +1,26 @@
 "use strict";
+const PROJECT_ID = ["project01", "project02", "project03"];
+
 const feedbackWindow = document.getElementById("feedbackContainer");
 const feedbackHeader = document.getElementById("feedbackHead");
+const feedbackButton = document.getElementById("feedbackButton");
+const cancelFeedbackBtn = document.getElementById("cancelFeedbackBtn");
+const mainPageArea = document.getElementById("mainSection");
+const feedbackForm = document.getElementById("feedbackForm");
+const projectBubble = [document.getElementById(PROJECT_ID[0]), document.getElementById(PROJECT_ID[1]), document.getElementById(PROJECT_ID[2])];
+
 let lastExpandedWindowId = "";
 let clickedABubble = false;
 
+//add listeners
+feedbackButton.addEventListener("click",showFeedbackForm);
+cancelFeedbackBtn.addEventListener("click",zoomOutFeedback);
+mainPageArea.addEventListener("click",HomeClick);
+feedbackForm.addEventListener("submit", confirmSubmit);
 
+for (let i = 0; i < projectBubble.length; i++) {
+    projectBubble[i].addEventListener("click",function(){makeMeBig(PROJECT_ID[i])});
+}
 
 //Starts the feedback form animation
 function showFeedbackForm(){

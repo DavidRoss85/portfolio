@@ -84,7 +84,7 @@
     </header>
 
     <!-- Main body -->
-    <main class="container-fluid" onclick="HomeClick()">
+    <main class="container-fluid" id="mainSection">
         
         <section id="intro"><!-- Introduction-->
             <div class="row justify-content-center pb-5">
@@ -196,7 +196,7 @@
                     </p>
                 </div>
                 
-                <div id="project01" onclick="makeMeBig('project01')" class="col-4 col-lg-3 transparent-box levitate container-like-ratio">
+                <div id="project01" class="col-4 col-lg-3 transparent-box levitate container-like-ratio">
                     <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -212,7 +212,7 @@
                     </a> -->
                 </div>
                 <!--Nucamp Website-->
-                <div id="project02" onclick="makeMeBig('project02')" class="col-4 col-lg-3 transparent-box levitate short-delay-1 container-like-ratio ">
+                <div id="project02" class="col-4 col-lg-3 transparent-box levitate short-delay-1 container-like-ratio ">
                     
                     <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
                         <div class="carousel-inner">
@@ -251,7 +251,7 @@
                     </p>
                 </div>
 
-                <div id="project03" onclick="makeMeBig('project03')" class="col-4 col-lg-3 transparent-box levitate short-delay-2 container-like-ratio">
+                <div id="project03" class="col-4 col-lg-3 transparent-box levitate short-delay-2 container-like-ratio">
                         <!-- <iframe class="d-none d-lg-block" src="#" title="W3Schools"></iframe> -->
                         
                         <div class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -279,7 +279,7 @@
             <div class="row justify-content-center"><!--Feedback form-->
                 <div class="col d-none" id="feedbackContainer">
                     <div class="transparent-box" >
-                        <form onsubmit="confirmSubmit()" id="feedbackForm">
+                        <form  id="feedbackForm">
                             <fieldset>
                                 <legend>Feel free to provide feedback about the site!</legend>
                                 <div class="row">
@@ -331,7 +331,7 @@
                                     <input class="btn btn-warning " type="submit"/>
                                 </div>
                                 <div class="col col-md-8">
-                                    <button class="btn btn-danger" type="button" onclick="zoomOutFeedback()">Cancel</button>
+                                    <button class="btn btn-danger" type="button" id="cancelFeedbackBtn">Cancel</button>
                                 </div>
                             </div>
 
@@ -375,7 +375,7 @@
                     </div>
                     <div class="row"><!--feedback button-->
                         <div class="col text-center">
-                            <button class="btn btn-warning levitate short-delay-3" onclick="showFeedbackForm()">Send Feedback</button>
+                            <button class="btn btn-warning levitate short-delay-3" id="feedbackButton">Send Feedback</button>
                         </div>
                     </div>
                     
