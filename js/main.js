@@ -75,7 +75,11 @@ function makeMeBig(itemId) {
         makeMeNormal(lastExpandedWindowId);
         //Then expand the clicked window
         thisItem.classList.remove("levitate");
-
+        //Show the text
+        const labelCaption = thisItem.querySelectorAll(".carousel-caption");
+        for (let i = 0; i<labelCaption.length; i++) {
+            labelCaption[i].classList.remove("d-none");
+        }
         //Site will attempt to scale based on viewport
         //Ensure window doesn't expand larger than smallest viewport dimension
         (screenHeight < screenWidth) ?
@@ -100,8 +104,14 @@ function makeMeNormal(itemId) {
     const thisItem = document.getElementById(itemId);
 
     if (itemId) {
+        //Shrink Window
         thisItem.classList.remove("expand-center");
         thisItem.classList.add("levitate");
+        //Remove caption
+        const labelCaption = thisItem.querySelectorAll(".carousel-caption");
+        for (let i = 0; i<labelCaption.length; i++) {
+            labelCaption[i].classList.add("d-none");
+        }
         lastExpandedWindowId = "";
 
     }
@@ -156,15 +166,15 @@ function projectURL(refId) {
     switch (refId) {
         case PROJECT_WINDOW_ID[0]:
             urlAddress = "projectdisplay.html";
-            localStorage.setItem("pageToDisplay", "");//"../../schoolwork/practice/pratice-css.html");
+            localStorage.setItem("pageToDisplay", "https://davidross-css-cafe.web.app/");//"../../schoolwork/practice/pratice-css.html");
             break;
         case PROJECT_WINDOW_ID[1]:
             urlAddress = "projectdisplay.html";
-            localStorage.setItem("pageToDisplay", "https://davidross-nucampsite-01.web.app/index.html");//"../../schoolwork/nucampsite/index.html");
+            localStorage.setItem("pageToDisplay", "https://davidross-nucampsite-01.web.app/");//"../../schoolwork/nucampsite/index.html");
             break;
         case PROJECT_WINDOW_ID[2]:
             urlAddress = "projectdisplay.html";
-            localStorage.setItem("pageToDisplay", ""); //"../../coffeeshop/index.html");
+            localStorage.setItem("pageToDisplay", "https://davidross-coffee-shop-1.web.app/"); //"../../coffeeshop/index.html");
             break;
         default:
             urlAddress = "#";
@@ -182,11 +192,4 @@ function HomeClick() {
     } else {
         clickedABubble = false;
     }
-}
-
-//This fuction passes the page to display to the project page
-function getDisplayPage(itemId) {
-    const pageToDisplay = localStorage.getItem("pageToDisplay");
-    document.getElementById(itemId).setAttribute("src", pageToDisplay);
-    //console.log(pageToDisplay);
 }
