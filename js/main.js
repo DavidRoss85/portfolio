@@ -1,4 +1,5 @@
 "use strict";
+//Global Constants
 const PROJECT_WINDOW_ID = ["project01", "project02", "project03"];
 
 const feedbackWindow = document.getElementById("feedbackContainer");
@@ -9,18 +10,24 @@ const mainPageArea = document.getElementById("mainSection");
 const feedbackForm = document.getElementById("feedbackForm");
 const projectBubble = [document.getElementById(PROJECT_WINDOW_ID[0]), document.getElementById(PROJECT_WINDOW_ID[1]), document.getElementById(PROJECT_WINDOW_ID[2])];
 
+//Global Variables
+let urlList = "";
 let lastExpandedWindowId = "";
 let clickedABubble = false;
 
-//add listeners
+//add event listeners
 feedbackButton.addEventListener("click", showFeedbackForm);
 cancelFeedbackBtn.addEventListener("click", zoomOutFeedback);
 mainPageArea.addEventListener("click", HomeClick);
 feedbackForm.addEventListener("submit", confirmSubmit);
-
 for (let i = 0; i < projectBubble.length; i++) {
     projectBubble[i].addEventListener("click", function () { makeMeBig(PROJECT_WINDOW_ID[i]) });
 }
+
+//Load all information at startup
+document.onload = loadStartInformation();
+
+
 
 //Starts the feedback form animation
 function showFeedbackForm() {
@@ -159,22 +166,24 @@ function calculateVert(itemId) {
 }
 
 
-//Place websites for each bubble here
+//Parses the URL list and navigates to the appropriate page depending on bubble clicked.
 function projectURL(refId) {
     let urlAddress = "#";
-
+    const urlArray = urlList.split("\n");
+    console.log(`The fetched text is: ${urlArray}`);
+    
     switch (refId) {
         case PROJECT_WINDOW_ID[0]:
             urlAddress = "projectdisplay.html";
-            localStorage.setItem("pageToDisplay", "https://davidross-css-cafe.web.app/");//"../../schoolwork/practice/pratice-css.html");
+            sessionStorage.setItem("pageToDisplay", urlArray[0]);
             break;
         case PROJECT_WINDOW_ID[1]:
             urlAddress = "projectdisplay.html";
-            localStorage.setItem("pageToDisplay", "https://davidross-nucampsite-01.web.app/");//"../../schoolwork/nucampsite/index.html");
+            sessionStorage.setItem("pageToDisplay", urlArray[1]);
             break;
         case PROJECT_WINDOW_ID[2]:
             urlAddress = "projectdisplay.html";
-            localStorage.setItem("pageToDisplay", "https://davidross-coffee-shop-1.web.app/"); //"../../coffeeshop/index.html");
+            sessionStorage.setItem("pageToDisplay", urlArray[2]);
             break;
         default:
             urlAddress = "#";
@@ -192,4 +201,21 @@ function HomeClick() {
     } else {
         clickedABubble = false;
     }
+}
+//gets all text from a file
+async function getTextFromFile(fileName, callBack){
+    const file = await fetch(fileName);
+    const text = await file.text();
+    callBack(text);
+    //return "adfafdf";//texty;
+   
+}
+//stores the URL list into the global variable. Used for async callback
+function storeURLList(text){
+    //Global variable
+    urlList = text;
+}
+//Runs all initialization tasks
+function loadStartInformation(){
+    getTextFromFile("text/webpages.txt",storeURLList);
 }
