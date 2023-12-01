@@ -17,7 +17,7 @@ let clickedABubble = false;
 
 //add event listeners
 feedbackButton.addEventListener("click", showFeedbackForm);
-cancelFeedbackBtn.addEventListener("click", zoomOutFeedback);
+cancelFeedbackBtn.addEventListener("click",hideFeedbackForm);
 mainPageArea.addEventListener("click", HomeClick);
 feedbackForm.addEventListener("submit", confirmSubmit);
 for (let i = 0; i < projectBubble.length; i++) {
@@ -31,36 +31,36 @@ document.onload = loadStartInformation();
 
 //Starts the feedback form animation
 function showFeedbackForm() {
-    slideInDMs();
+    flyInWindow("feedbackContainer");
+    flyInWindow("feedbackHead");
     document.getElementById("userName").focus;
     window.location.href = "#feedback";
-
 }
-//Zooms in the feedback window
-function slideInDMs() {
-    feedbackWindow.classList.add("zoom-in-from-left");
-    feedbackWindow.classList.remove("d-none");
-    feedbackWindow.classList.remove("zoom-out-to-right");
-
-    feedbackHeader.classList.add("zoom-in-from-left");
-    feedbackHeader.classList.remove("d-none");
-    feedbackHeader.classList.remove("zoom-out-to-right");
-
+//Hide the feedback form
+function hideFeedbackForm(){
+    flyOutWindow("feedbackContainer");
+    flyOutWindow("feedbackHead");
 }
+//Flys in the window
+function flyInWindow(itemId){
+    const currentWindow = document.getElementById(itemId);
+    
+    currentWindow.classList.add("fly-in-from-left");
+    currentWindow.classList.remove("d-none");
+    currentWindow.classList.remove("fly-out-to-right");
+}
+
 //When user clicks Submit
 function confirmSubmit() {
     alert("Thank you for your submission.");
-    zoomOutFeedback();
+    flyOutWindow("feedbackContainer");
 }
 //Zooms out the feedback window
-function zoomOutFeedback() {
-    feedbackWindow.classList.add("zoom-out-to-right");
-    feedbackWindow.classList.remove("zoom-in-from-left");
+function flyOutWindow(itemId) {
+    const currentWindow = document.getElementById(itemId);
 
-    feedbackHeader.classList.remove("zoom-in-from-left");
-    feedbackHeader.classList.add("zoom-out-to-right");
-
-    console.log(feedbackWindow.className);
+    currentWindow.classList.add("fly-out-to-right");
+    currentWindow.classList.remove("fly-in-from-left");
 }
 //Expands the windows when clicked:
 function makeMeBig(itemId) {
@@ -77,6 +77,7 @@ function makeMeBig(itemId) {
         //If you click the same window, it will navigate to that page
         makeMeNormal(lastExpandedWindowId);
         window.location.href = projectURL(itemId);
+        //projectURL(itemId);
     } else {
         // Otherwise Shrink whatever the last window was
         makeMeNormal(lastExpandedWindowId);
@@ -170,7 +171,7 @@ function calculateVert(itemId) {
 function projectURL(refId) {
     let urlAddress = "#";
     const urlArray = urlList.split("\n");
-    console.log(`The fetched text is: ${urlArray}`);
+    //console.log(`The fetched text is: ${urlArray}`);
     
     switch (refId) {
         case PROJECT_WINDOW_ID[0]:
@@ -206,8 +207,8 @@ function HomeClick() {
 async function getTextFromFile(fileName, callBack){
     const file = await fetch(fileName);
     const text = await file.text();
+    console.log(text);
     callBack(text);
-    //return "adfafdf";//texty;
    
 }
 //stores the URL list into the global variable. Used for async callback
@@ -217,5 +218,5 @@ function storeURLList(text){
 }
 //Runs all initialization tasks
 function loadStartInformation(){
-    getTextFromFile("text/webpages.txt",storeURLList);
+    getTextFromFile("./text/webpages.txt",storeURLList);
 }

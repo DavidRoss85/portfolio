@@ -16,7 +16,7 @@
     
     --global-font-color: rgba(255,255,255,1);
     --accent-color1: rgba(255, 208, 0,1);
-    --accent-color2: rgba(255,0,0,1);
+    --accent-color2: #FFF;
     --nav-link-color:rgba(255,200,100,1);
     --nav-hover-color:rgba(255,0,0,1);
 
@@ -35,7 +35,8 @@ html{
 }
 
 body{
-    color: var(--global-font-color)
+    color: var(--global-font-color);
+    /* font-size: 2vw; */
 }
 
 ul {
@@ -124,22 +125,21 @@ ul {
     border: 1px;
     padding: 1px;
 }
-.styled-hyperlink {
-    & a{
-        
-        text-decoration: none;
-        padding: 5px 1em;
-        display:inline-block;
-        color:var(--nav-link-color);
-        &:hover, &:hover >*{
-            transition: .5s;
-            color:var(--nav-hover-color);
-            transform: scale(1.25,1.25);
-        }
-        &:hover text{
-            fill:var(--nav-hover-color);
-        }
+.styled-hyperlink a{
+
+    text-decoration: none;
+    padding: 5px 1em;
+    display:inline-block;
+    color:var(--nav-link-color);
+    &:hover, &:hover >*{
+        transition: .5s;
+        color:var(--nav-hover-color);
+        transform: scale(1.25,1.25);
     }
+    &:hover text{
+        fill:var(--nav-hover-color);
+    }
+    
 }
 .breadcrumb {
     & a{
@@ -199,4 +199,13 @@ ul {
     max-width: 1000px;
     max-height: 1000px;
     /* transition: height 1s linear; */
+}
+
+@media screen and (min-width: 600px){
+    .top-summary {
+        font-size: 1.75vw;
+    }
+    .top-summary-title {
+        font-size: 3vw;
+    }
 }

@@ -69,7 +69,7 @@
     animation-name: levitate;
     
 }
-.zoom-in-from-left {
+.fly-in-from-left {
     animation-duration:.5s ;
     animation-fill-mode: both;
     animation-name: zoom-from-left;
@@ -79,7 +79,7 @@
     animation-fill-mode: both;
     animation-name: collapse-out;
 }
-.zoom-out-to-right{
+.fly-out-to-right{
     animation-duration:.5s ;
     animation-fill-mode: both;
     animation-name: zoom-to-right-disappear;
