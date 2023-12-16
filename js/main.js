@@ -207,7 +207,7 @@ function HomeClick() {
 async function getTextFromFile(fileName, callBack){
     const file = await fetch(fileName);
     const text = await file.text();
-    console.log(text);
+    // console.log(text);
     callBack(text);
    
 }
