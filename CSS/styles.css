@@ -184,7 +184,7 @@ ul {
 .container-like-ratio img {
 
     width: 100%;
-    /* height: 24vw; */
+    height: 24vw;
     object-fit: contain;
 
 }

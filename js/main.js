@@ -1,6 +1,7 @@
 "use strict";
 //Global Constants
 const PROJECT_WINDOW_ID = ["project01", "project02", "project03"];
+const PROJECT_LIST_URL = require("url:../data/weblist.json");
 
 const feedbackWindow = document.getElementById("feedbackContainer");
 const feedbackHeader = document.getElementById("feedbackHead");
@@ -204,11 +205,10 @@ function HomeClick() {
     }
 }
 //gets all text from a file
-async function getTextFromFile(fileName, callBack){
-    const file = await fetch(fileName);
-    const text = await file.text();
-    // console.log(text);
-    callBack(text);
+async function getMyProjects(){
+    const file = await fetch(PROJECT_LIST_URL);
+    const text = await file.json();
+    return text;
    
 }
 //stores the URL list into the global variable. Used for async callback
@@ -217,6 +217,11 @@ function storeURLList(text){
     urlList = text;
 }
 //Runs all initialization tasks
-function loadStartInformation(){
-    getTextFromFile("./text/webpages.txt",storeURLList);
+async function loadStartInformation(){
+    // "title": "",
+    // "url": "",
+    // "description":""
+
+    const projectInfo = await getMyProjects();
+
 }

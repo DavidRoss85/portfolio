@@ -1,0 +1,17 @@
+[
+    {
+        "title": "CSS Cafe",
+        "url": "https://davidross-css-cafe.web.app/",
+        "description":"This is a fictional website displaying a menu with various items. Site created using HTML, CSS, and Bootstrap classes."
+    },
+    {
+        "title": "Nucamp site",
+        "url": "https://davidross-nucampsite-01.web.app/",
+        "description":"This is a fictional website for camping and fun. Site includes tables, forms and even an accordion."
+    },
+    {
+        "title": "Coffee Shop",
+        "url": "https://davidross-coffee-shop-1.web.app/",
+        "description":"Feeling thirsty? Need a pick-me-up? Check out this template for a coffee shop."
+    }
+]
