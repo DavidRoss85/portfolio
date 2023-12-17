@@ -33,7 +33,10 @@
     
     <title>David Ross - Web Developer</title>
 </head>
-<body class="gradient-background">
+
+<!-- Added the data-bs-toggle... and data-bs-target attributes to work around a glitch where the navbar would remain open.
+Now, clicking anywhere on the body will close the navbar -->
+<body class="gradient-background" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
         
     <!--Navbar-->
     <nav class="navbar navbar-expand-md transparent-bar-nav navbar-dark sticky-top styled-hyperlink">
@@ -214,9 +217,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <a href="../schoolwork/pratice-css.html" target="_blank" class="text-decoration-none">
-                        <span class="d-lg-none">Visit the CSS Corner Cafe website</span>
-                    </a> -->
                 </div>
                 <!--Nucamp Website-->
                 <div id="project02" class="col-4 col-lg-3 transparent-box levitate short-delay-1 container-like-ratio ">
@@ -247,9 +247,6 @@
                         </div>
                     </div>
                     
-                    <!-- <a href=" https://davidross-nucampsite-01.web.app" target="_blank" class="text-decoration-none">
-                        <span class="ps-2 mx-auto text-center">Visit the Nucamp website</span>
-                    </a> -->
                 </div>
                 <div id="project02Text" class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
                     <h4 id="pj02Head">
@@ -271,7 +268,6 @@
                 </div>
 
                 <div id="project03" class="col-4 col-lg-3 transparent-box levitate short-delay-2 container-like-ratio">
-                        <!-- <iframe class="d-none d-lg-block" src="#" title="W3Schools"></iframe> -->
                         
                         <div class="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div class="carousel-inner">

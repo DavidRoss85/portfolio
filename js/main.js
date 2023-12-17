@@ -1,7 +1,10 @@
 "use strict";
+
 //Global Constants
 const PROJECT_WINDOW_ID = ["project01", "project02", "project03"];
-const PROJECT_LIST_URL = require("url:../data/weblist.json");
+const PROJECT_LIST_URL = "url:../data/weblist.txt";
+
+
 
 const feedbackWindow = document.getElementById("feedbackContainer");
 const feedbackHeader = document.getElementById("feedbackHead");
@@ -12,7 +15,7 @@ const feedbackForm = document.getElementById("feedbackForm");
 const projectBubble = [document.getElementById(PROJECT_WINDOW_ID[0]), document.getElementById(PROJECT_WINDOW_ID[1]), document.getElementById(PROJECT_WINDOW_ID[2])];
 
 //Global Variables
-let urlList = "";
+let urlList = [];
 let lastExpandedWindowId = "";
 let clickedABubble = false;
 
@@ -171,21 +174,21 @@ function calculateVert(itemId) {
 //Parses the URL list and navigates to the appropriate page depending on bubble clicked.
 function projectURL(refId) {
     let urlAddress = "#";
-    const urlArray = urlList.split("\n");
+    const urlArray = urlList //.split("\n");
     //console.log(`The fetched text is: ${urlArray}`);
     
     switch (refId) {
         case PROJECT_WINDOW_ID[0]:
             urlAddress = "projectdisplay.html";
-            sessionStorage.setItem("pageToDisplay", urlArray[0]);
+            sessionStorage.setItem("pageToDisplay", urlArray[0].url);
             break;
         case PROJECT_WINDOW_ID[1]:
             urlAddress = "projectdisplay.html";
-            sessionStorage.setItem("pageToDisplay", urlArray[1]);
+            sessionStorage.setItem("pageToDisplay", urlArray[1].url);
             break;
         case PROJECT_WINDOW_ID[2]:
             urlAddress = "projectdisplay.html";
-            sessionStorage.setItem("pageToDisplay", urlArray[2]);
+            sessionStorage.setItem("pageToDisplay", urlArray[2].url);
             break;
         default:
             urlAddress = "#";
@@ -206,22 +209,82 @@ function HomeClick() {
 }
 //gets all text from a file
 async function getMyProjects(){
-    const file = await fetch(PROJECT_LIST_URL);
-    const text = await file.json();
-    return text;
+        // let fileToFetch = require(PROJECT_LIST_URL);
+        const fileToFetch=require("url:../data/weblist.txt");
+        const file = await fetch(fileToFetch);
+        const text = await file.json();
+        console.log(text);
+        return text;
    
-}
-//stores the URL list into the global variable. Used for async callback
-function storeURLList(text){
-    //Global variable
-    urlList = text;
 }
 //Runs all initialization tasks
 async function loadStartInformation(){
     // "title": "",
     // "url": "",
     // "description":""
+    // "images":[]
 
-    const projectInfo = await getMyProjects();
+    urlList = await getMyProjects();
+    //constructProjectBubbles(projectInfo);
 
+
+}
+
+//WIP
+function constructProjectBubbles(projectInfo){
+/* <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/Nucamp/nucamp1.png" alt="..." class="d-block">
+            <div class="carousel-caption transparent-bar d-none">
+                <p>Visit the Nucamp Webpage</p>
+            </div>
+
+        </div>
+        <div class="carousel-item">
+            <img src="images/Nucamp/nucamp2.png" alt="..." class="d-block">
+            <div class="carousel-caption transparent-bar d-none">
+                <p>Visit the Nucamp Webpage</p>
+            </div>
+
+        </div>
+        <div class="carousel-item">
+            <img src="images/Nucamp/nucamp3.png" alt="..." class="d-block">
+            <div class="carousel-caption transparent-bar d-none">
+                <p>Visit the Nucamp Webpage</p>
+            </div>
+
+        </div>
+    </div>
+</div> */
+    const theImage = require("../images/Nucamp/nucamp1.png");
+    for(let i=0;i<3;i++){
+        const carouselHTML = `
+        <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src= "${theImage}" alt="..." class="d-block">
+                    <div class="carousel-caption transparent-bar d-none">
+                        <p>${projectInfo[i].title}</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/Nucamp/nucamp2.png" alt="..." class="d-block">
+                    <div class="carousel-caption transparent-bar d-none">
+                        <p>Visit the Nucamp Webpage</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/Nucamp/nucamp3.png" alt="..." class="d-block">
+                    <div class="carousel-caption transparent-bar d-none">
+                        <p>Visit the Nucamp Webpage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
+        const projectWindow = document.getElementById(`project02`);
+        projectWindow.innerHTML= carouselHTML;
+    }
+    console.log("construction successful");
 }

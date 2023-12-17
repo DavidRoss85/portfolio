@@ -174,7 +174,6 @@ ul {
         ) ; 
         
 }
-
 .match-height-to-width {
 	position: relative;
     padding-bottom: 100%;
@@ -189,8 +188,10 @@ ul {
 
 }
 
-.carousel-caption p {
+.carousel-caption{
     font-size: var(--project-window-text-size);
+    position: fixed;
+    top:50%;
 }
 
 #project01, #project02, #project03 {
