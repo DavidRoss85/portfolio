@@ -1,25 +1,22 @@
 "use strict";
 
 //Global Constants
-const PROJECT_WINDOW_ID = ["project01", "project02", "project03"];
-const PROJECT_LIST_URL = "url:../data/weblist.txt";
+const PROJECT_WINDOW_ID = ["project1", "project2", "project3"];
 
-
-
-const feedbackWindow = document.getElementById("feedbackContainer");
-const feedbackHeader = document.getElementById("feedbackHead");
 const feedbackButton = document.getElementById("feedbackButton");
 const cancelFeedbackBtn = document.getElementById("cancelFeedbackBtn");
 const mainPageArea = document.getElementById("mainSection");
 const feedbackForm = document.getElementById("feedbackForm");
 const projectBubble = [document.getElementById(PROJECT_WINDOW_ID[0]), document.getElementById(PROJECT_WINDOW_ID[1]), document.getElementById(PROJECT_WINDOW_ID[2])];
+const profileSummary = document.getElementById("profileSummary");
 
 //Global Variables
-let urlList = [];
+let projectArray = [];
 let lastExpandedWindowId = "";
 let clickedABubble = false;
 
 //add event listeners
+profileSummary.addEventListener("animationend", ()=>{profileSummary.classList.remove("fly-in-from-left")})
 feedbackButton.addEventListener("click", showFeedbackForm);
 cancelFeedbackBtn.addEventListener("click",hideFeedbackForm);
 mainPageArea.addEventListener("click", HomeClick);
@@ -174,21 +171,19 @@ function calculateVert(itemId) {
 //Parses the URL list and navigates to the appropriate page depending on bubble clicked.
 function projectURL(refId) {
     let urlAddress = "#";
-    const urlArray = urlList //.split("\n");
-    //console.log(`The fetched text is: ${urlArray}`);
     
     switch (refId) {
         case PROJECT_WINDOW_ID[0]:
             urlAddress = "projectdisplay.html";
-            sessionStorage.setItem("pageToDisplay", urlArray[0].url);
+            sessionStorage.setItem("pageToDisplay", projectArray[0].url);
             break;
         case PROJECT_WINDOW_ID[1]:
             urlAddress = "projectdisplay.html";
-            sessionStorage.setItem("pageToDisplay", urlArray[1].url);
+            sessionStorage.setItem("pageToDisplay", projectArray[1].url);
             break;
         case PROJECT_WINDOW_ID[2]:
             urlAddress = "projectdisplay.html";
-            sessionStorage.setItem("pageToDisplay", urlArray[2].url);
+            sessionStorage.setItem("pageToDisplay", projectArray[2].url);
             break;
         default:
             urlAddress = "#";
@@ -224,67 +219,45 @@ async function loadStartInformation(){
     // "description":""
     // "images":[]
 
-    urlList = await getMyProjects();
-    //constructProjectBubbles(projectInfo);
+    projectArray = await getMyProjects();
+    constructProjectBubbles(projectArray);
 
 
 }
 
-//WIP
+
 function constructProjectBubbles(projectInfo){
-/* <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="images/Nucamp/nucamp1.png" alt="..." class="d-block">
-            <div class="carousel-caption transparent-bar d-none">
-                <p>Visit the Nucamp Webpage</p>
-            </div>
+    
+    //Note: Cannot construct a bootstrap carousel from scratch or it will not animate.
+    //Must append to an already existing bootstrap carousel.
+    for (let i = 0; i < 3; i++) {
 
-        </div>
-        <div class="carousel-item">
-            <img src="images/Nucamp/nucamp2.png" alt="..." class="d-block">
-            <div class="carousel-caption transparent-bar d-none">
-                <p>Visit the Nucamp Webpage</p>
-            </div>
+        let carouselHTML = `<div class="carousel-inner">`
 
-        </div>
-        <div class="carousel-item">
-            <img src="images/Nucamp/nucamp3.png" alt="..." class="d-block">
-            <div class="carousel-caption transparent-bar d-none">
-                <p>Visit the Nucamp Webpage</p>
-            </div>
+        for (let j = 0; j < projectInfo[i].imgRef.length; j++) {
+            const tmpSrc = document.getElementById(projectInfo[i].imgRef[j]).src;
+            let tmpText = "";
+            if (j === 0) tmpText = "active";
 
-        </div>
-    </div>
-</div> */
-    const theImage = require("../images/Nucamp/nucamp1.png");
-    for(let i=0;i<3;i++){
-        const carouselHTML = `
-        <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src= "${theImage}" alt="..." class="d-block">
-                    <div class="carousel-caption transparent-bar d-none">
-                        <p>${projectInfo[i].title}</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/Nucamp/nucamp2.png" alt="..." class="d-block">
-                    <div class="carousel-caption transparent-bar d-none">
-                        <p>Visit the Nucamp Webpage</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/Nucamp/nucamp3.png" alt="..." class="d-block">
-                    <div class="carousel-caption transparent-bar d-none">
-                        <p>Visit the Nucamp Webpage</p>
-                    </div>
+            carouselHTML += `
+            <div class="carousel-item ${tmpText}">
+                <img src= "${tmpSrc}" alt="..." class="d-block">
+                <div class="carousel-caption transparent-bar-center d-none">
+                    <p>${projectInfo[i].title}</p>
                 </div>
             </div>
+            `
+        }
+        carouselHTML += `
         </div>
         `
-        const projectWindow = document.getElementById(`project02`);
-        projectWindow.innerHTML= carouselHTML;
+        const projectWindow = document.getElementById(PROJECT_WINDOW_ID[i]).firstElementChild;//PROJECT_WINDOW_ID[i]);
+        const projectHead = document.getElementById(`pj${i+1}Head`);
+        const projectDesc = document.getElementById(`pj${i+1}Desc`);
+
+        projectWindow.innerHTML = carouselHTML;
+        projectHead.textContent = projectInfo[i].title;
+        projectDesc.textContent = projectInfo[i].description;
     }
     console.log("construction successful");
 }

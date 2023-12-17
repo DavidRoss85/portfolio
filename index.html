@@ -91,7 +91,7 @@ Now, clicking anywhere on the body will close the navbar -->
         
         <section id="intro"><!-- Introduction-->
             <div class="row justify-content-center pb-5">
-                <div class="col-md-12 fly-in-from-left" >
+                <div id="profileSummary" class="col-md-12 fly-in-from-left" >
                     <div class="row align-items-center">
                         <div class="col-md-5 col-lg-4 pb-3 pt-3">
                             <picture>
@@ -190,16 +190,16 @@ Now, clicking anywhere on the body will close the navbar -->
 
             <div class="row justify-content-center"><!--Project bubbles-->
                 <!--CSS Cafe-->
-                <div id="project01Text" class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
-                    <h4 id="pj01Head">
+                <div id="project1Text" class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
+                    <h4 id="pj1Head">
                         Check out the menu at CSS Cafe.
                     </h4>
-                    <p class="d-none d-sm-block" id="pj01Desc">
+                    <p class="d-none d-sm-block" id="pj1Desc">
                         This is a fictional website displaying a menu with various items. Site created using HTML, CSS, and Bootstrap classes.
                     </p>
                 </div>
                 
-                <div id="project01" class="col-4 col-lg-3 transparent-box levitate container-like-ratio">
+                <div id="project1" class="col-4 col-lg-3 transparent-box levitate container-like-ratio">
                     <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -219,7 +219,7 @@ Now, clicking anywhere on the body will close the navbar -->
                     </div>
                 </div>
                 <!--Nucamp Website-->
-                <div id="project02" class="col-4 col-lg-3 transparent-box levitate short-delay-1 container-like-ratio ">
+                <div id="project2" class="col-4 col-lg-3 transparent-box levitate short-delay-1 container-like-ratio ">
                     
                     <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
                         <div class="carousel-inner">
@@ -248,26 +248,26 @@ Now, clicking anywhere on the body will close the navbar -->
                     </div>
                     
                 </div>
-                <div id="project02Text" class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
-                    <h4 id="pj02Head">
+                <div id="project2Text" class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
+                    <h4 id="pj2Head">
                         Visit the Camp website.
                     </h4>
-                    <p class="d-none d-sm-block" id="pj02Desc">
+                    <p class="d-none d-sm-block" id="pj2Desc">
                         This is a fictional website for camping and fun. Site includes tables, forms and even an accordion.
                     </p>
                 </div>
 
                 <!--Coffee shop-->
-                <div id="project03Text" class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
-                    <h4 id="pj03Head">
+                <div id="project3Text" class="col-6 d-lg-none d-md-inline-block align-self-center text-center">
+                    <h4 id="pj3Head">
                         Dark Themed Coffee Shop
                     </h4>
-                    <p class="d-none d-sm-block" id="pj03Desc">
+                    <p class="d-none d-sm-block" id="pj3Desc">
                         Feeling thirsty? Need a pick-me-up? Check out this template for a coffee shop.
                     </p>
                 </div>
 
-                <div id="project03" class="col-4 col-lg-3 transparent-box levitate short-delay-2 container-like-ratio">
+                <div id="project3" class="col-4 col-lg-3 transparent-box levitate short-delay-2 container-like-ratio">
                         
                         <div class="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div class="carousel-inner">
@@ -418,6 +418,26 @@ Now, clicking anywhere on the body will close the navbar -->
         </div>
     </footer>
 
+    <!-- Using this trick to force parcel to load images until I learn how to do it properly -->
+    <div class="d-none">
+        <div id="nucampImages">
+            <img id="ncImg1" src="./images/Nucamp/nucamp1.png" alt="">
+            <img id="ncImg2"  src="./images/Nucamp/nucamp2.png" alt="">
+            <img id="ncImg3"  src="./images/Nucamp/nucamp3.png" alt="">
+        </div>
+        <div id="cssCafeImages">
+            <img id="cssCImg1" src="./images/Corner_Cafe/CSS-Cafe.png" alt="">
+        </div>
+        <div id="coffeeImages">
+            <img id="coffeeImg1" src="./images/Coffee_Shop/Coffee_01.png" alt="">
+        </div>
+        <div id="newsAppImages">
+            <img id="newsImg1" src="./images/NewsApp/NewsApp1.png" alt="">
+            <img id="newsImg2" src="./images/NewsApp/NewsApp2.png" alt="">
+            <img id="newsImg3" src="./images/NewsApp/NewsApp3.png" alt="">
+            <img id="newsImg4" src="./images/NewsApp/NewsApp4.png" alt="">
+        </div>
+    </div>
     
     <!-- Bootstrap Self Contained JS -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js">

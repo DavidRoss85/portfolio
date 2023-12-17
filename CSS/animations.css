@@ -36,6 +36,16 @@
     100% {transform: translateX(2%);} 
 }
 
+@keyframes rough-shake{
+    0%{transform: translateX(-1%);}
+    20%{transform: translateX(+1%);}
+    40%{transform: translateX(-1%);}
+    60%{transform: translateX(+1%);}
+    80%{transform: translateX(-1%);}
+    100%{transform: translateX(+1%);}
+
+}
+
 @keyframes expand-window{
     
     /* 100%{transform:scale(2); } */
@@ -96,4 +106,9 @@
     animation-fill-mode:both;
     animation-iteration-count: initial;
     animation-name: expand-window; 
+}
+
+.shake-hard{
+    animation-name: rough-shake;
+    animation-duration: .3s;
 }
