@@ -7,4 +7,6 @@ function getDisplayPage(itemId) {
     console.log("The loaded page is: " + pageToDisplay);
 }
 
-document.onload = getDisplayPage('project-frame');
+// document.onload = getDisplayPage('project-frame');
+//Load all information at startup
+window.onpageshow = ()=>getDisplayPage('project-frame');

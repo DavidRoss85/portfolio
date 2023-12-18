@@ -1,11 +1,7 @@
 "use strict";
 import {
     getMyProjects,
-    test,
-    fadeOutMainPage,
     fadeOutLoadingScreen,
-    showLoadingScreen,
-    hideLoadingScreen,
     sleep
 } from "./shared"
 
@@ -13,7 +9,7 @@ import {
 let projectArray = [];
 
 //Load all information at startup
-document.onload = loadStartInformation();
+window.onpageshow = ()=>loadStartInformation();
 
 async function loadStartInformation(){
     
@@ -25,15 +21,7 @@ async function loadStartInformation(){
     fadeOutLoadingScreen(275);
 }
 
-// async function getMyProjects(){
-//     // let fileToFetch = require(PROJECT_LIST_URL);
-//     const fileToFetch=require("url:../data/weblist.txt");
-//     const file = await fetch(fileToFetch);
-//     const text = await file.json();
-//     console.log(text);
-//     return text;
 
-// }
 function displayProjects(projectInfo){
     // <div class="col-6 col-lg-4 transparent-box">
     //         <img src="images/Coffee_Shop/Coffee_01.png" alt="..." class="d-block img-fluid">
@@ -46,7 +34,7 @@ function displayProjects(projectInfo){
     const projectRow = document.getElementById("projectRow");
     let projectHTML = ``
 
-    for (project of projectInfo) {
+    for (let project of projectInfo) {
         
         const tmpSrc = document.getElementById(project.imgRef[0]).src;
 
