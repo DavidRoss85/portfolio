@@ -1,23 +1,37 @@
 [
     {
+        "title": "Coming Soon...",
+        "url": "comingsoon.html",
+        "description":"Casino blackjack",
+        "images": ["images/Casino/Casino1.png","images/Casino/Casino2.png","images/Casino/Casino3.png","images/Casino/Casino4.png","images/Casino/Casino5.png","images/Casino/Casino6.png","images/Casino/Casino7.png"],
+        "imgRef": ["casinoImg1","casinoImg2","casinoImg3","casinoImg4","casinoImg5","casinoImg6","casinoImg7"]
+    },
+    {
         "title": "News App",
         "url": "https://davidross-News-app.web.app/",
-        "description":"An artificial news website utilizing the Google news API",
-        "images": ["images/NewsApp/NewsApp1.png","images/NewsApp/NewsApp2.png","images/NewsApp/NewsApp3.png","images/NewsApp/NewsApp4.png"],
-        "imgRef": ["newsImg1","newsImg2","newsImg3","newsImg4"]
+        "description":"Find the extra smiley! Race against the clock or play forever. With 10 difficulty levels, how high can you score?",
+        "images": ["images/Matching/matching1.png","images/Matching/matching2.png","images/Matching/matching3.png"],
+        "imgRef": ["matchImg1","matchImg2","matchImg3"]
+    },
+    {
+        "title": "Matching Game",
+        "url": "https://davidross-matching-game.web.app/",
+        "description":"Casino blackjack",
+        "images": ["images/Casino/Casino1.png","images/Casino/Casino2.png","images/Casino/Casino3.png","images/Casino/Casino4.png","images/Casino/Casino5.png","images/Casino/Casino6.png","images/Casino/Casino7.png"],
+        "imgRef": ["casinoImg1","casinoImg2","casinoImg3","casinoImg4","casinoImg5","casinoImg6","casinoImg7"]
     },
     {
         "title": "Camp website",
         "url": "https://davidross-nucampsite-01.web.app/",
         "description":"This is a fictional website for camping and fun. Site includes tables, forms and even an accordion.",
-        "images":["../images/Nucamp/nucamp1.png","images/Nucamp/nucamp2.png","images/Nucamp/nucamp3.png"],
+        "images":["images/Nucamp/nucamp1.png","images/Nucamp/nucamp2.png","images/Nucamp/nucamp3.png"],
         "imgRef": ["ncImg1","ncImg2","ncImg3"]
     },
     {
         "title": "Dark Themed Coffee Shop",
         "url": "https://davidross-coffee-shop-1.web.app/",
         "description":"Feeling thirsty? Need a pick-me-up? Check out this template for a coffee shop.",
-        "images":["../images/Coffee_Shop/Coffee_01.png"],
+        "images":["images/Coffee_Shop/Coffee_01.png"],
         "imgRef": ["coffeeImg1"]
 
     },
