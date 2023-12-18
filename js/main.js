@@ -32,9 +32,7 @@ feedbackButton.addEventListener("click", showFeedbackForm);
 cancelFeedbackBtn.addEventListener("click",hideFeedbackForm);
 mainPageArea.addEventListener("click", HomeClick);
 feedbackForm.addEventListener("submit", confirmSubmit);
-allProjectsLink.addEventListener("click",()=>{fadeOutMainPage(350,()=>{
-    document.location.href= require("url:../projectlist.html")})
-});
+allProjectsLink.addEventListener("click",()=>{fadeOutMainPage(350,()=>{document.location.href= "../projectlist.html"});});
 for (let i = 0; i < projectBubble.length; i++) {
     projectBubble[i].addEventListener("click", function () { makeMeBig(PROJECT_WINDOW_ID[i]) });
 }
