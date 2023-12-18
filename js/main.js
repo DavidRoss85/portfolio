@@ -6,9 +6,11 @@ const PROJECT_WINDOW_ID = ["project1", "project2", "project3"];
 const feedbackButton = document.getElementById("feedbackButton");
 const cancelFeedbackBtn = document.getElementById("cancelFeedbackBtn");
 const mainPageArea = document.getElementById("mainSection");
+const loadingScreen = document.getElementById("loadScreen");
 const feedbackForm = document.getElementById("feedbackForm");
 const projectBubble = [document.getElementById(PROJECT_WINDOW_ID[0]), document.getElementById(PROJECT_WINDOW_ID[1]), document.getElementById(PROJECT_WINDOW_ID[2])];
 const profileSummary = document.getElementById("profileSummary");
+const allProjectsLink = document.getElementById("allProjectsLink");
 
 //Global Variables
 let projectArray = [];
@@ -21,6 +23,7 @@ feedbackButton.addEventListener("click", showFeedbackForm);
 cancelFeedbackBtn.addEventListener("click",hideFeedbackForm);
 mainPageArea.addEventListener("click", HomeClick);
 feedbackForm.addEventListener("submit", confirmSubmit);
+allProjectsLink.addEventListener("click",()=>{fadeOutMainPage(350,()=>document.location.href="projectlist.html")})
 for (let i = 0; i < projectBubble.length; i++) {
     projectBubble[i].addEventListener("click", function () { makeMeBig(PROJECT_WINDOW_ID[i]) });
 }
@@ -77,7 +80,8 @@ function makeMeBig(itemId) {
     if (lastExpandedWindowId == itemId) {
         //If you click the same window, it will navigate to that page
         makeMeNormal(lastExpandedWindowId);
-        window.location.href = projectURL(itemId);
+        fadeOutMainPage(275,()=>document.location.href=projectURL(itemId))
+        // window.location.href = projectURL(itemId);
         //projectURL(itemId);
     } else {
         // Otherwise Shrink whatever the last window was
@@ -221,10 +225,45 @@ async function loadStartInformation(){
 
     projectArray = await getMyProjects();
     constructProjectBubbles(projectArray);
-
-
+    await sleep(100);
+    fadeOutLoadingScreen(275);
+    
 }
 
+function fadeOutMainPage(delay = 1000, callback = ()=>{console.log("No function passed")}){
+    mainPageArea.addEventListener("animationend",showLoadingScreen);
+    mainPageArea.classList.add("fade-out");
+    sleep(delay).then(callback)
+}
+
+function fadeOutLoadingScreen(delay = 1000, callback = ()=>{console.log("No function passed")}){
+    loadingScreen.addEventListener("animationend",hideLoadingScreen);
+    loadingScreen.classList.add("fade-out");
+    sleep(delay).then(callback);
+}
+function showLoadingScreen(){
+    mainPageArea.classList.add("d-none");
+    mainPageArea.classList.remove("fade-out");
+    loadingScreen.classList.remove("d-none");
+    mainPageArea.removeEventListener("animationend",showLoadingScreen);
+}
+
+function hideLoadingScreen(){
+    mainPageArea.classList.remove("d-none");
+    loadingScreen.classList.remove("fade-out");
+    loadingScreen.classList.add("d-none");
+    loadingScreen.removeEventListener("animationend",hideLoadingScreen);
+}
+
+
+function test(){
+    console.log("in Test... wait 5 seconds")
+    sleep(5000).then(()=>console.log("Test complete"))
+}
+//timer sleep function
+async function sleep(time) {
+    return new Promise(resolve => setTimeout(resolve, time))
+  };
 
 function constructProjectBubbles(projectInfo){
     

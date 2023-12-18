@@ -36,6 +36,7 @@
 
 <!-- Added the data-bs-toggle... and data-bs-target attributes to work around a glitch where the navbar would remain open.
 Now, clicking anywhere on the body will close the navbar -->
+<!-- NOTE!!! This will make all plain text links ineffective unless wrapped in an element (like <span></span> for example) -->
 <body class="gradient-background" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
         
     <!--Navbar-->
@@ -80,14 +81,28 @@ Now, clicking anywhere on the body will close the navbar -->
 
     <!--Header-->
     <header class="container-fluid transparent-bar text-center">
+        
         <div class="row">
             <h1 class="col-12">David Ross</h1>
             <h2 class="col-12">Freelance Web Developer</h2> 
         </div>
+
+        <!-- Loading Screen -->
+        <div class="row justify-content-center align-items-center">
+            <div class="col" id="loadScreen">
+                <div class="row">
+                    <div class="col align-middle text-center justify-content-center">
+                        <h1>Loading...</h1>
+                        <!-- <div class="loading-wheel stationary"></div> -->
+                        <div class="loading-wheel rotate-clockwise"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Main body -->
-    <main class="container-fluid" id="mainSection">
+    <main class="container-fluid d-none" id="mainSection">
         
         <section id="intro"><!-- Introduction-->
             <div class="row justify-content-center pb-5">
@@ -293,7 +308,7 @@ Now, clicking anywhere on the body will close the navbar -->
             <div class="row justify-content-center">
                 <div class="col-10 transparent-box levitate">
                     <div class="text-center styled-hyperlink">
-                        <a href ="projectlist.html">See all projects</a>
+                        <span id="allProjectsLink" class="link-appearance">See all projects</span>
                     </div>
                 </div>
             </div>
@@ -384,10 +399,10 @@ Now, clicking anywhere on the body will close the navbar -->
                         <h4 class="col with-accent2 text-center">Connect:</h4>
                     </div>
                     <div class="row"><!--links-->
-                        <a class="col text-center text-nowrap" href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> LinkedIn</a>
-                        <a class="col text-center text-nowrap short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> GitHub</a>
-                        <a class="col text-center text-nowrap short-delay-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i> Instagram</a>
-                        <a class="col text-center text-nowrap short-delay-3" href="#"><i class="fa-brands fa-facebook fa-xl"></i> Facebook</a>
+                        <a class="col text-center text-nowrap" href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> <span>LinkedIn</span></a>
+                        <a class="col text-center text-nowrap short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> <span>GitHub</span></a>
+                        <a class="col text-center text-nowrap short-delay-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i> <span>Instagram</span></a>
+                        <a class="col text-center text-nowrap short-delay-3" href="#"><i class="fa-brands fa-facebook fa-xl"></i> <span>Facebook</span></a>
                     </div>
                 </div>
                 <div class="col-sm-8 col-md-6"><!--Contact-->
@@ -398,10 +413,10 @@ Now, clicking anywhere on the body will close the navbar -->
                     </div>
                     <div class="row"><!--links-->
                         <div class="col text-center">
-                            <a class="text-nowrap"href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> officialdavidross@gmail.com</a> 
+                            <a class="text-nowrap" href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> <span>officialdavidross@gmail.com</span></a> 
                         </div>
                         <div class="col text-center">
-                            <a class="short-delay-2 text-nowrap" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> +1-555-555-5555</a>
+                            <a class="short-delay-2 text-nowrap" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> <span>+1-555-555-5555</span></a>
                         </div>
                     </div>
                     <div class="row"><!--feedback button-->

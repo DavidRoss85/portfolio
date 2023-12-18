@@ -6,6 +6,15 @@
 
 
 }
+@keyframes fade{
+    0%{opacity: 1.0;}
+    100%{opacity: 0;}
+}
+@keyframes rotate{
+    0%{transform: rotateZ(1deg);}
+    50%{transform: rotateZ(180deg);}
+    100%{transform: rotateZ(360deg);}
+}
 
 @keyframes levitate{
     0%{transform: translateY(+5%);}
@@ -111,4 +120,15 @@
 .shake-hard{
     animation-name: rough-shake;
     animation-duration: .3s;
+}
+
+.fade-out{
+    animation-name: fade;
+    animation-duration: .25s;
+}
+.rotate-clockwise{
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
 }
