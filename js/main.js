@@ -3,7 +3,8 @@ import {
     getMyProjects,
     fadeOutMainPage,
     fadeOutLoadingScreen,
-    sleep
+    sleep,
+    generateNavbar
 } from "./shared"
 // export {loadingScreen,mainPageArea}
 //Global Constants
@@ -213,7 +214,8 @@ function HomeClick() {
 
 //Runs all initialization tasks
 async function loadStartInformation(){
-    
+   
+    await generateNavbar("index","nav");
     projectArray = await getMyProjects();
     constructProjectBubbles(projectArray);
     await sleep(100);

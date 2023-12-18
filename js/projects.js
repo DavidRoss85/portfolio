@@ -2,7 +2,8 @@
 import {
     getMyProjects,
     fadeOutLoadingScreen,
-    sleep
+    sleep,
+    generateNavbar
 } from "./shared"
 
 //Global Variables
@@ -13,6 +14,7 @@ window.onpageshow = ()=>loadStartInformation();
 
 async function loadStartInformation(){
     
+    await generateNavbar("projectlist","nav");
     // alert("this runs right now"); 
     projectArray = await getMyProjects();
     // console.log(projectArray);
