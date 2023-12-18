@@ -4,13 +4,13 @@ import {
     fadeOutMainPage,
     fadeOutLoadingScreen,
     sleep,
-    generateNavbar
+    generateNavbar,
+    generateFooter
 } from "./shared"
 // export {loadingScreen,mainPageArea}
 //Global Constants
 const PROJECT_WINDOW_ID = ["project1", "project2", "project3"];
 
-const feedbackButton = document.getElementById("feedbackButton");
 const cancelFeedbackBtn = document.getElementById("cancelFeedbackBtn");
 const mainPageArea = document.getElementById("mainSection");
 const loadingScreen = document.getElementById("loadScreen");
@@ -26,7 +26,6 @@ let clickedABubble = false;
 
 //add event listeners
 profileSummary.addEventListener("animationend", ()=>{profileSummary.classList.remove("fly-in-from-left")})
-feedbackButton.addEventListener("click", showFeedbackForm);
 cancelFeedbackBtn.addEventListener("click",hideFeedbackForm);
 mainPageArea.addEventListener("click", HomeClick);
 feedbackForm.addEventListener("submit", confirmSubmit);
@@ -216,6 +215,9 @@ function HomeClick() {
 async function loadStartInformation(){
    
     await generateNavbar("index","nav");
+    generateFooter("footer",true);
+    const feedbackButton = document.getElementById("feedbackButton");
+    feedbackButton.addEventListener("click", showFeedbackForm);
     projectArray = await getMyProjects();
     constructProjectBubbles(projectArray);
     await sleep(100);

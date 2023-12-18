@@ -111,6 +111,58 @@ async function generateNavbar(targetPage = "", targetEl = "nav", links =[{"title
 
 }
 
+function generateFooter(targetEl="footer", feedbackButton = false){
+    const footEl = document.querySelector(targetEl);
+    footEl.setAttribute("class","text-start");
+    let footerHTML=`
+    <hr/>
+    <div class="container-fluid">
+        <div class="row transparent-box styled-hyperlink"> <!--Links-->
+            <div class="col-sm-4 col-md-6" > <!--Connect-->
+                <div class="row"><!--Header-->
+                    <h4 class="col with-accent2 text-center">Connect:</h4>
+                </div>
+                <div class="row"><!--links-->
+                    <a class="col text-center text-nowrap" href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> <span>LinkedIn</span></a>
+                    <a class="col text-center text-nowrap short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> <span>GitHub</span></a>
+                    <a class="col text-center text-nowrap short-delay-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i> <span>Instagram</span></a>
+                    <a class="col text-center text-nowrap short-delay-3" href="#"><i class="fa-brands fa-facebook fa-xl"></i> <span>Facebook</span></a>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-6"><!--Contact-->
+                <div class="row"> <!--Header-->
+                    <div class="col">
+                        <h4 class="with-accent2 text-center">Contact:</h4>
+                    </div>
+                </div>
+                <div class="row"><!--links-->
+                    <div class="col text-center">
+                        <a class="text-nowrap" href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> <span>officialdavidross@gmail.com</span></a> 
+                    </div>
+                    <div class="col text-center">
+                        <a class="short-delay-2 text-nowrap" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> <span>+1-555-555-5555</span></a>
+                    </div>
+                </div>
+                `
+    if(feedbackButton){
+        footerHTML+=`
+                    <div class="row"><!--feedback button-->
+                        <div class="col text-center">
+                            <button class="btn btn-warning levitate short-delay-3" id="feedbackButton">Send Feedback</button>
+                        </div>
+                    </div>
+                    `
+    }
+    footerHTML +=`
+            </div>
+        </div>
+    </div>
+    <div class="transparent-bar-nav text-center"><!--Copyright footer-->
+        © Copyright all rights reserved.  Check         
+    </div>
+    `
+    footEl.innerHTML = footerHTML;
+}
 export{
     getMyProjects,
     test,
@@ -119,5 +171,6 @@ export{
     showLoadingScreen,
     hideLoadingScreen,
     sleep,
-    generateNavbar
+    generateNavbar,
+    generateFooter
 }

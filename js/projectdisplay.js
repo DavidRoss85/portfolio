@@ -2,7 +2,8 @@
 import {
     generateNavbar,
     sleep,
-    fadeOutLoadingScreen 
+    fadeOutLoadingScreen, 
+    generateFooter
 } from "./shared";
 
 //get page to diplay passed from main.js
@@ -18,6 +19,7 @@ window.onpageshow = ()=>loadStartInformation();
 
 async function loadStartInformation(){
     await generateNavbar("projectdisplay","nav");
+    generateFooter("footer");
     getDisplayPage('project-frame');
     await sleep(100);
     fadeOutLoadingScreen(275);
