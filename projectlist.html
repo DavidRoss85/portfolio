@@ -34,6 +34,9 @@
     
     <title>David Ross - Web Developer</title>
 </head>
+<!-- Added the data-bs-toggle... and data-bs-target attributes to work around a glitch where the navbar would remain open.
+Now, clicking anywhere on the body will close the navbar -->
+<!-- NOTE!!! This will make some plain text links ineffective unless wrapped in an element (like <span></span> for example) -->
 <body class="gradient-background" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
     
     <!--Navbar-->
@@ -69,8 +72,8 @@
                     <li class="navbar-item levitate short-delay-1"><a href="index.html" aria-current="true" class="navbar-link active px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</span></a></li>
                     <li class="navbar-item levitate short-delay-2"><a href="index.html#intro" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</span></a></li>
                     <li class="navbar-item levitate short-delay-3"><a href="index.html#details" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Skills</span></a></li>
-                    <li class="navbar-item levitate short-delay-4"><a href="index.html#projects" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</span></a></li>
-                    <li class="navbar-item levitate short-delay-5"><a href="index.html#footer" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</span></a></li>
+                    <li class="navbar-item levitate short-delay-4"><a href="#" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</span></a></li>
+                    <li class="navbar-item levitate short-delay-5"><a href="#footer" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</span></a></li>
                 </ul>
             </div>
         </div>
