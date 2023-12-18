@@ -51,12 +51,15 @@ function displayProjects(projectInfo){
         const tmpSrc = document.getElementById(project.imgRef[0]).src;
 
         projectHTML += `
-            <div class="col-6 col-lg-4 transparent-box">
-                    <img src="${tmpSrc}" alt="..." class="d-block img-fluid">
-                </div>
-                <div class="col-4 col-lg-6 align-self-center top-summary">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
+            <div class="col-md-5 transparent-box">
+                <div class="row">
+                    <div class="col-4">
+                        <a href="${project.url}" target="_blank"><img src="${tmpSrc}" alt="..." class="d-block img-fluid"></a>
+                    </div>
+                    <div class="col align-self-center top-summary">
+                        <a href="${project.url}" target="_blank"><h3>${project.title} <i class="fa-solid fa-arrow-up-right-from-square"></i></h3></a>
+                        <p>${project.description}</p>
+                    </div>
                 </div>
             </div>
             `
