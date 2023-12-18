@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css">
     
     <title>David Ross - Web Developer</title>
 </head>
@@ -49,12 +50,12 @@
             </a>
             
             <!--for debug (Displays BS viewport)-->
-            <span class="d-sm-none">XS</span>
+            <!-- <span class="d-sm-none">XS</span>
             <span class="d-none d-sm-inline d-md-none">SM</span>
             <span class="d-none d-md-inline d-lg-none">MD</span>
             <span class="d-none d-lg-inline d-xl-none">LG</span>
             <span class="d-none d-xl-inline">XL</span>
-            <span class="d-inline">&nbsp;View</span>
+            <span class="d-inline">&nbsp;View</span> -->
 
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
@@ -75,8 +76,31 @@
         </div>
     </nav>
 
+    <!--Header-->
+    <header class="container-fluid transparent-bar text-center">
+    
+        <div class="row">
+            <h1 class="col-12">David Ross</h1>
+            <h2 class="col-12">Freelance Web Developer</h2> 
+        </div>
+
+        <!-- Loading Screen -->
+        <div class="row justify-content-center align-items-center d-none">
+            <div class="col" id="loadScreen">
+                <div class="row">
+                    <div class="col align-middle text-center justify-content-center">
+                        <h1>Loading...</h1>
+                        <!-- <div class="loading-wheel stationary"></div> -->
+                        <div class="loading-wheel rotate-clockwise"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
     <!--Main body-->
-    <main class="container-fluid">
+    <main class="container-fluid" id="mainSection">
+
         <div class="row">
             <div class="col">
                 <ol class="breadcrumb">
@@ -86,7 +110,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="projectRow">
             <div class="col-6 col-lg-4 transparent-box">
                 <img src="images/Coffee_Shop/Coffee_01.png" alt="..." class="d-block img-fluid">
             </div>
@@ -153,19 +177,37 @@
         </div>
     </footer>
 
-    
+    <!-- Using this trick to force parcel to load images until I learn how to do it properly -->
+    <div class="d-none">
+        <div id="nucampImages">
+            <img id="ncImg1" src="./images/Nucamp/nucamp1.png" alt="">
+            <img id="ncImg2"  src="./images/Nucamp/nucamp2.png" alt="">
+            <img id="ncImg3"  src="./images/Nucamp/nucamp3.png" alt="">
+        </div>
+        <div id="cssCafeImages">
+            <img id="cssCImg1" src="./images/Corner_Cafe/CSS-Cafe.png" alt="">
+        </div>
+        <div id="coffeeImages">
+            <img id="coffeeImg1" src="./images/Coffee_Shop/Coffee_01.png" alt="">
+        </div>
+        <div id="newsAppImages">
+            <img id="newsImg1" src="./images/NewsApp/NewsApp1.png" alt="">
+            <img id="newsImg2" src="./images/NewsApp/NewsApp2.png" alt="">
+            <img id="newsImg3" src="./images/NewsApp/NewsApp3.png" alt="">
+            <img id="newsImg4" src="./images/NewsApp/NewsApp4.png" alt="">
+        </div>
+    </div>
+
     <!-- Bootstrap Self Contained JS -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js">
     </script>
+
+    <script src="js/projects.js" type="module"></script>
 
     <!--Bootstrap script online-->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
         crossorigin="anonymous">
     </script> -->
-
-    <script>
-    </script>
-
 
 </body>

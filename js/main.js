@@ -1,5 +1,14 @@
 "use strict";
-
+import {
+    getMyProjects,
+    test,
+    fadeOutMainPage,
+    fadeOutLoadingScreen,
+    showLoadingScreen,
+    hideLoadingScreen,
+    sleep
+} from "./shared"
+// export {loadingScreen,mainPageArea}
 //Global Constants
 const PROJECT_WINDOW_ID = ["project1", "project2", "project3"];
 
@@ -23,7 +32,9 @@ feedbackButton.addEventListener("click", showFeedbackForm);
 cancelFeedbackBtn.addEventListener("click",hideFeedbackForm);
 mainPageArea.addEventListener("click", HomeClick);
 feedbackForm.addEventListener("submit", confirmSubmit);
-allProjectsLink.addEventListener("click",()=>{fadeOutMainPage(350,()=>document.location.href="projectlist.html")})
+allProjectsLink.addEventListener("click",()=>{fadeOutMainPage(350,()=>{
+    document.location.href= require("url:../projectlist.html")})
+});
 for (let i = 0; i < projectBubble.length; i++) {
     projectBubble[i].addEventListener("click", function () { makeMeBig(PROJECT_WINDOW_ID[i]) });
 }
@@ -207,21 +218,17 @@ function HomeClick() {
     }
 }
 //gets all text from a file
-async function getMyProjects(){
-        // let fileToFetch = require(PROJECT_LIST_URL);
-        const fileToFetch=require("url:../data/weblist.txt");
-        const file = await fetch(fileToFetch);
-        const text = await file.json();
-        console.log(text);
-        return text;
+// async function getMyProjects(){
+//         // let fileToFetch = require(PROJECT_LIST_URL);
+//         const fileToFetch=require("url:../data/weblist.txt");
+//         const file = await fetch(fileToFetch);
+//         const text = await file.json();
+//         console.log(text);
+//         return text;
    
-}
+// }
 //Runs all initialization tasks
 async function loadStartInformation(){
-    // "title": "",
-    // "url": "",
-    // "description":""
-    // "images":[]
 
     projectArray = await getMyProjects();
     constructProjectBubbles(projectArray);
@@ -230,40 +237,40 @@ async function loadStartInformation(){
     
 }
 
-function fadeOutMainPage(delay = 1000, callback = ()=>{console.log("No function passed")}){
-    mainPageArea.addEventListener("animationend",showLoadingScreen);
-    mainPageArea.classList.add("fade-out");
-    sleep(delay).then(callback)
-}
+// function fadeOutMainPage(delay = 1000, callback = ()=>{console.log("No function passed")}){
+//     mainPageArea.addEventListener("animationend",showLoadingScreen);
+//     mainPageArea.classList.add("fade-out");
+//     sleep(delay).then(callback)
+// }
 
-function fadeOutLoadingScreen(delay = 1000, callback = ()=>{console.log("No function passed")}){
-    loadingScreen.addEventListener("animationend",hideLoadingScreen);
-    loadingScreen.classList.add("fade-out");
-    sleep(delay).then(callback);
-}
-function showLoadingScreen(){
-    mainPageArea.classList.add("d-none");
-    mainPageArea.classList.remove("fade-out");
-    loadingScreen.classList.remove("d-none");
-    mainPageArea.removeEventListener("animationend",showLoadingScreen);
-}
+// function fadeOutLoadingScreen(delay = 1000, callback = ()=>{console.log("No function passed")}){
+//     loadingScreen.addEventListener("animationend",hideLoadingScreen);
+//     loadingScreen.classList.add("fade-out");
+//     sleep(delay).then(callback);
+// }
+// function showLoadingScreen(){
+//     mainPageArea.classList.add("d-none");
+//     mainPageArea.classList.remove("fade-out");
+//     loadingScreen.classList.remove("d-none");
+//     mainPageArea.removeEventListener("animationend",showLoadingScreen);
+// }
 
-function hideLoadingScreen(){
-    mainPageArea.classList.remove("d-none");
-    loadingScreen.classList.remove("fade-out");
-    loadingScreen.classList.add("d-none");
-    loadingScreen.removeEventListener("animationend",hideLoadingScreen);
-}
+// function hideLoadingScreen(){
+//     mainPageArea.classList.remove("d-none");
+//     loadingScreen.classList.remove("fade-out");
+//     loadingScreen.classList.add("d-none");
+//     loadingScreen.removeEventListener("animationend",hideLoadingScreen);
+// }
 
 
-function test(){
-    console.log("in Test... wait 5 seconds")
-    sleep(5000).then(()=>console.log("Test complete"))
-}
-//timer sleep function
-async function sleep(time) {
-    return new Promise(resolve => setTimeout(resolve, time))
-  };
+// function test(){
+//     console.log("in Test... wait 5 seconds")
+//     sleep(5000).then(()=>console.log("Test complete"))
+// }
+// //timer sleep function
+// async function sleep(time) {
+//     return new Promise(resolve => setTimeout(resolve, time))
+// };
 
 function constructProjectBubbles(projectInfo){
     
