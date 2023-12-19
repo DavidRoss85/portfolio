@@ -158,7 +158,7 @@ function generateFooter(targetEl="footer", feedbackButton = false){
         </div>
     </div>
     <div class="transparent-bar-nav text-center"><!--Copyright footer-->
-        © Copyright all rights reserved.  Check         
+        © Copyright all rights reserved.        
     </div>
     `
     footEl.innerHTML = footerHTML;
