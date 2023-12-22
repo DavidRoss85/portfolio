@@ -172,5 +172,6 @@ export{
     hideLoadingScreen,
     sleep,
     generateNavbar,
-    generateFooter
+    generateFooter,
+    mainPageArea
 }

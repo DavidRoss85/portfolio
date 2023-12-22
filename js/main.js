@@ -5,14 +5,15 @@ import {
     fadeOutLoadingScreen,
     sleep,
     generateNavbar,
-    generateFooter
+    generateFooter,
+    mainPageArea
 } from "./shared"
 // export {loadingScreen,mainPageArea}
 //Global Constants
 const PROJECT_WINDOW_ID = ["project1", "project2", "project3"];
 
 const cancelFeedbackBtn = document.getElementById("cancelFeedbackBtn");
-const mainPageArea = document.getElementById("mainSection");
+//const mainPageArea = document.getElementById("mainSection");
 const loadingScreen = document.getElementById("loadScreen");
 const feedbackForm = document.getElementById("feedbackForm");
 const projectBubble = [document.getElementById(PROJECT_WINDOW_ID[0]), document.getElementById(PROJECT_WINDOW_ID[1]), document.getElementById(PROJECT_WINDOW_ID[2])];
