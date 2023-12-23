@@ -2,7 +2,7 @@
     {
         "title": "Casino Blackjack",
         "url": "https://davidross-casino.web.app/",
-        "description":"Casino blackjack",
+        "description":"Single player Casino blackjack",
         "images": ["images/Casino/Casino1.png","images/Casino/Casino2.png","images/Casino/Casino3.png","images/Casino/Casino4.png","images/Casino/Casino5.png","images/Casino/Casino6.png","images/Casino/Casino7.png"],
         "imgRef": ["casinoImg1","casinoImg2","casinoImg3","casinoImg4","casinoImg5","casinoImg6","casinoImg7"]
     },
