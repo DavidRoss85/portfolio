@@ -1,3 +1,4 @@
+import {projectList, navList} from '../data/weblist'
 
 const mainPageArea = document.getElementById("mainSection");
 const loadingScreen = document.getElementById("loadScreen");
@@ -39,20 +40,20 @@ async function sleep(time) {
 
 async function getMyProjects(){
     // let fileToFetch = require(PROJECT_LIST_URL);
-    const fileToFetch=require("url:../data/weblist.txt");
-    const file = await fetch(fileToFetch);
-    const text = await file.json();
-    return text;
+    // const fileToFetch=require("url:../data/weblist.txt");
+    // const file = await fetch(fileToFetch);
+    // const text = await file.json();
+    return projectList;
 
 }
 
 async function generateNavbar(targetPage = "", targetEl = "nav", links =[{"title":"Home","url":"#"}]){
     let navData = [];
     if (targetPage){
-        const fileToFetch=require("url:../data/navlist.txt");
-        const file = await fetch(fileToFetch);
-        const text = await file.json();
-        navData = text[targetPage];
+        // const fileToFetch=require("url:../data/navlist.txt");
+        // const file = await fetch(fileToFetch);
+        // const text = await file.json();
+        navData = navList[targetPage];
     } else{
         navData = links;
     }
@@ -125,8 +126,8 @@ function generateFooter(targetEl="footer", feedbackButton = false){
                 <div class="row"><!--links-->
                     <a class="col text-center text-nowrap" href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> <span>LinkedIn</span></a>
                     <a class="col text-center text-nowrap short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> <span>GitHub</span></a>
-                    <a class="col text-center text-nowrap short-delay-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i> <span>Instagram</span></a>
-                    <a class="col text-center text-nowrap short-delay-3" href="#"><i class="fa-brands fa-facebook fa-xl"></i> <span>Facebook</span></a>
+                    <a class="col text-center text-nowrap short-delay-2" href="https://www.instagram.com/davidross.web.dev?igsh=ZHd2YTRieWdkMjA="><i class="fa-brands fa-instagram fa-xl"></i> <span>Instagram</span></a>
+                    <a class="col text-center text-nowrap short-delay-3" href="https://www.facebook.com/profile.php?id=61557966474181"><i class="fa-brands fa-facebook fa-xl"></i> <span>Facebook</span></a>
                 </div>
             </div>
             <div class="col-sm-8 col-md-6"><!--Contact-->
@@ -139,16 +140,16 @@ function generateFooter(targetEl="footer", feedbackButton = false){
                     <div class="col text-center">
                         <a class="text-nowrap" href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> <span>officialdavidross@gmail.com</span></a> 
                     </div>
-                    <div class="col text-center">
+                    <!--<div class="col text-center">
                         <a class="short-delay-2 text-nowrap" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> <span>+1-555-555-5555</span></a>
-                    </div>
+                    </div>-->
                 </div>
                 `
     if(feedbackButton){
         footerHTML+=`
                     <div class="row"><!--feedback button-->
                         <div class="col text-center">
-                            <button class="btn btn-warning levitate short-delay-3" id="feedbackButton">Send Feedback</button>
+                            <button class="btn btn-warning levitate short-delay-3" id="feedbackButton" hidden>Send Feedback</button>
                         </div>
                     </div>
                     `

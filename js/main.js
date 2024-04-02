@@ -1,3 +1,4 @@
+//JS for index.html
 "use strict";
 import {
     getMyProjects,
@@ -85,7 +86,8 @@ function makeMeBig(itemId) {
     if (lastExpandedWindowId == itemId) {
         //If you click the same window, it will navigate to that page
         makeMeNormal(lastExpandedWindowId);
-        fadeOutMainPage(275,()=>document.location.href=projectURL(itemId))
+        // fadeOutMainPage(275,()=>document.location.href=projectURL(itemId))
+        window.open(projectURL(itemId),'_blank').focus();
         // window.location.href = projectURL(itemId);
         //projectURL(itemId);
     } else {
@@ -183,16 +185,19 @@ function projectURL(refId) {
     
     switch (refId) {
         case PROJECT_WINDOW_ID[0]:
-            urlAddress = "projectdisplay.html";
-            sessionStorage.setItem("pageToDisplay", projectArray[0].url);
+            urlAddress = projectArray[0].url
+            // urlAddress = "projectdisplay.html";
+            // sessionStorage.setItem("pageToDisplay", projectArray[0].url);
             break;
         case PROJECT_WINDOW_ID[1]:
-            urlAddress = "projectdisplay.html";
-            sessionStorage.setItem("pageToDisplay", projectArray[1].url);
+            urlAddress = projectArray[1].url
+            // urlAddress = "projectdisplay.html";
+            // sessionStorage.setItem("pageToDisplay", projectArray[1].url);
             break;
         case PROJECT_WINDOW_ID[2]:
-            urlAddress = "projectdisplay.html";
-            sessionStorage.setItem("pageToDisplay", projectArray[2].url);
+            urlAddress = projectArray[2].url
+            // urlAddress = "projectdisplay.html";
+            // sessionStorage.setItem("pageToDisplay", projectArray[2].url);
             break;
         default:
             urlAddress = "#";

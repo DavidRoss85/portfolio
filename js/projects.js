@@ -43,7 +43,7 @@ function displayProjects(projectInfo){
         const tmpSrc = document.getElementById(project.imgRef[0]).src;
 
         projectHTML += `
-            <div class="col-md-5 transparent-box">
+            <div class="col-md-12 transparent-box">
                 <div class="row">
                     <div class="col-4">
                         <a href="${project.url}" target="_blank"><img src="${tmpSrc}" alt="..." class="d-block img-fluid"></a>
