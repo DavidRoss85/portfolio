@@ -262,7 +262,7 @@ function constructProjectBubbles(projectInfo){
 
         projectWindow.innerHTML = carouselHTML;
         projectHead.textContent = projectInfo[i].title;
-        projectDesc.textContent = projectInfo[i].description;
+        projectDesc.innerHTML = projectInfo[i].shortdesc;
     }
     console.log("construction successful");
 }

@@ -1,4 +1,5 @@
 import {projectList, navList} from '../data/weblist'
+import { resumeDownload } from '../data/weblist';
 
 const mainPageArea = document.getElementById("mainSection");
 const loadingScreen = document.getElementById("loadScreen");
@@ -91,7 +92,7 @@ async function generateNavbar(targetPage = "", targetEl = "nav", links =[{"title
     
     for(let link of navData){
         navHTML += `
-        <li class="navbar-item levitate short-delay-2"><a href="${link.url}" class="navbar-link px-4"><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">${link.title}</span></a></li>
+        <li class="navbar-item levitate short-delay-2"><a href="${link.url}" class="navbar-link px-4" ${link.url===resumeDownload? "target='_blank'":""}><span data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">${link.title}</span></a></li>
         `
     }
             // `
@@ -139,6 +140,9 @@ function generateFooter(targetEl="footer", feedbackButton = false){
                 <div class="row"><!--links-->
                     <div class="col text-center">
                         <a class="text-nowrap" href="mailto:officialdavidross@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i> <span>officialdavidross@gmail.com</span></a> 
+                    </div>
+                    <div class="col text-center">
+                        <a class="text-nowrap" href="${resumeDownload}" download="DavidRoss_Resume.docx" target="_blank"><i class="fa-solid fa-file"></i> <span>Resumé</span></a> 
                     </div>
                     <!--<div class="col text-center">
                         <a class="short-delay-2 text-nowrap" href="tel:+1-555-555-5555"><i class="fa-solid fa-phone fa-xl"></i> <span>+1-555-555-5555</span></a>

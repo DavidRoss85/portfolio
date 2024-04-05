@@ -247,11 +247,11 @@ ul {
     /* transition: height 1s linear; */
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 900px){
     .top-summary {
-        font-size: 1.75vw;
+        font-size: 1.5vw;
     }
     .top-summary-title {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 }
