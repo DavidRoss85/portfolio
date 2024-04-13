@@ -25,7 +25,7 @@ export const projectList = [
             </strong><br/>
             React, React Spring, Express.js, MongoDB, Passport (JWT)<br/>
             Deployed using Google Cloud Functions / Firebase`,
-        images: ["images/NewsApp/NewsApp1.png", "images/NewsApp/NewsApp2.png", "images/NewsApp/NewsApp3.png", "images/NewsApp/NewsApp4.png"],
+        images: ["images/NewsApp/NewsApp1.jpg", "images/NewsApp/NewsApp2.jpg", "images/NewsApp/NewsApp3.jpg", "images/NewsApp/NewsApp4.jpg"],
         imgRef: ["newsImg1", "newsImg2", "newsImg3", "newsImg4"]
     },
     {
@@ -60,7 +60,7 @@ export const projectList = [
             </strong><br/>
             JavaScript, HTML, CSS<br/>
             Deployed using Google Firebase`,
-        images: ["images/Casino/Casino1.png", "images/Casino/Casino2.png", "images/Casino/Casino3.png", "images/Casino/Casino4.png", "images/Casino/Casino5.png", "images/Casino/Casino6.png", "images/Casino/Casino7.png"],
+        images: ["images/Casino/Casino1.jpg", "images/Casino/Casino2.jpg", "images/Casino/Casino3.jpg", "images/Casino/Casino4.jpg", "images/Casino/Casino5.jpg", "images/Casino/Casino6.jpg", "images/Casino/Casino7.jpg"],
         imgRef: ["casinoImg1", "casinoImg2", "casinoImg3", "casinoImg4", "casinoImg5", "casinoImg6", "casinoImg7"]
     },
     {
@@ -86,7 +86,7 @@ export const projectList = [
             </strong><br/>
             JavaScript, HTML, CSS<br/>
             Deployed using Google Firebase`,
-        images: ["images/Matching/matching1.png", "images/Matching/matching2.png", "images/Matching/matching3.png"],
+        images: ["images/Matching/matching1.jpg", "images/Matching/matching2.jpg", "images/Matching/matching3.jpg"],
         imgRef: ["matchImg1", "matchImg2", "matchImg3"]
     },
     {
@@ -107,7 +107,7 @@ export const projectList = [
             </ul>
         </small>`,
         shortdesc:"A full front-end website including campsite registration and more.<br/>Utilizes Bootstrap framework, HTML, CSS",
-        images: ["../images/Nucamp/nucamp1.png", "images/Nucamp/nucamp2.png", "images/Nucamp/nucamp3.png"],
+        images: ["../images/Nucamp/nucamp1.jpg", "images/Nucamp/nucamp2.jpg", "images/Nucamp/nucamp3.jpg"],
         imgRef: ["ncImg1", "ncImg2", "ncImg3"]
     },
     {
@@ -122,7 +122,7 @@ export const projectList = [
         This site utilizes mobile first design and viewport adjustments using bootstrap for media query breakpoints.
         Dark themes work so well sometimes so I decided to apply it here. I also utilized gradients across objects for definition without hard borders.<br/>
         `,
-        images: ["../images/Coffee_Shop/Coffee_01.png"],
+        images: ["../images/Coffee_Shop/Coffee_01.jpg"],
         imgRef: ["coffeeImg1"]
 
     },
@@ -138,7 +138,7 @@ export const projectList = [
         At the time I didn't know about flexbox styling so I used the float property to make the windows stack side by side.
         However, this was when created the translucent rounded windows that I continue to use for everything today! XD`,
         shortdesc:"This was actually my first page created using HTML and CSS.<br/>I've left it here to remind myself of how far I've come since then.",
-        images: ["images/Corner_Cafe/CSS-Cafe.png"],
+        images: ["images/Corner_Cafe/CSS-Cafe.jpg"],
         imgRef: ["cssCImg1"]
     },
 ];

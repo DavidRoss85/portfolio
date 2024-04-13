@@ -43,6 +43,9 @@ ul {
     list-style-type: none;
 }
 
+.round-icon{
+    border-radius: 50%;
+}
 .project-window-iframe {
     height: 75vh;
 }
