@@ -128,7 +128,7 @@ function generateFooter(targetEl="footer", feedbackButton = false){
                     <a class="col text-center text-nowrap" href="https://www.linkedin.com/in/david-a-ross-wa/"><i class="fa-brands fa-linkedin fa-xl"></i> <span>LinkedIn</span></a>
                     <a class="col text-center text-nowrap short-delay-1" href="https://github.com/DavidRoss85"><i class="fa-brands fa-github fa-xl"></i> <span>GitHub</span></a>
                     <a class="col text-center text-nowrap short-delay-2" href="https://www.instagram.com/davidross.web.dev?igsh=ZHd2YTRieWdkMjA="><i class="fa-brands fa-instagram fa-xl"></i> <span>Instagram</span></a>
-                    <a class="col text-center text-nowrap short-delay-3" href="https://www.facebook.com/profile.php?id=61557966474181"><i class="fa-brands fa-facebook fa-xl"></i> <span>Facebook</span></a>
+                    <a class="col text-center text-nowrap short-delay-3" href="https://www.youtube.com/channel/UCedCZdgvbRnsnoBOMEJ15KQ"><i class="fa-brands fa-youtube"></i> <span>YouTube</span></a>
                 </div>
             </div>
             <div class="col-sm-8 col-md-6"><!--Contact-->
